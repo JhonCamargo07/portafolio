@@ -7,25 +7,25 @@
     <link rel="icon" href="imagenes/mi_logo.png">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/dca352768f.js" crossorigin="anonymous"></script>
     <title>Portafolio Jhon Camargo</title>
 </head>
 <body>
 
     <div class="contenedor">
-        <header class="header">
+        <header class="header" id="header">
                 <a href="http://jhoncamargo.000webhostapp.com/" class="header__enlace">
                     <img src="imagenes/logo_jhon_camargo.png" alt="" class="header__logo">
                 </a>
+                <i class="icono icono__nav fas fa-bars" id="icono_nav"></i>
                 <nav class="header__nav">
                     <a href="#sobre_mi" class="header__enlaces">Sobre mí</a>
                     <a href="#" class="header__enlaces">Habilidades</a>
                     <a href="#contacto" class="header__enlaces">Contacto</a>
-                    <a href="#" class="header__enlaces">Nose</a>
-                    <a href="#" class="header__enlaces">nose2</a>
                 </nav>
         </header>
         
-        <section class="parallax">
+        <section class="parallax" id="contenedor_parallax">
             <div>
                 <img src="imagenes/parallax.jpg" alt="" class="parallax__imagen">
             </div>
@@ -64,32 +64,32 @@
         </div>
 
         <div class="contacto">
-            <h1 class="contacto__titulo informacion__titulo" id="contacto">Contacto</h1>
+            <h1 class="contacto__titulo informacion__titulo" id="contacto">Contáctame</h1>
             
-                <div>
-                    <input type="text" class="contacto__inputs" id="" placeholder="Nombre*">
-                </div>
+            <div><input type="text" class="contacto__inputs" id="" placeholder="Nombre*"></div>
 
-                <div>
-                    <input type="text" class="contacto__inputs" id="" placeholder="Correo*">
-                </div>
+            <div><input type="text" class="contacto__inputs" id="" placeholder="Correo*"></div>
 
-                <div>
-                    <textarea name="" class="contacto__textarea" id="" cols="30" rows="5" placeholder="Mensaje"></textarea>
-                </div>
+            <div><textarea name="" class="contacto__textarea" id=""  rows="5" placeholder="Mensaje"></textarea></div>
 
-                <div>
-                    <input type="submit" class="contacto__boton" id="" placeholder="Nombre">
-                </div>
+            <div><input type="submit" class="contacto__boton" id="" placeholder="Nombre"></div>
                 
         </div>
+            
+            <a href="#" class="icono icono__subir icono__none" id="icono_subir"><i class="fas fa-chevron-up"></i></a>
 
         <footer class="footer">
-            <i>icono #1</i>
-            <i>icono #2</i>
-            <i>icono #3</i>
-            <i>icono #4</i>
-            <i>icono #5</i>
+            <div class="footer__iconos">
+                <a href="#" class="icono"><i class=" fab fa-facebook-f"></i></a>
+                <a href="#" class="icono"><i class=" fab fa-twitter"></i></a>
+                <a href="#" class="icono"><i class=" fab fa-linkedin-in"></i></a>
+                <a href="#" class="icono"><i class=" fab fa-github"></i></a>
+            </div>
+            <div class="footer__parrafo">
+                <p>Portafolio Jhon Camargo.</p>
+                <p>Version 1.0 Copyright © 2021</p>
+            </div>
+            <p class="footer__parrafo">Está página fue desarrollada con Html5, Css3, JavaScript y Php.</p>
         </footer>
 
     </div>

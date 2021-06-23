@@ -9,11 +9,12 @@
     --bg-titulo: rgba(255, 255, 255, .30);
     --color-secundario: #BEC6D5;
     --white: #ffffff;
+    --icono: #2A72C0;
 }
 
 body {
     background: var(--background);
-    font-size: 18px;
+    font-size: 1.125em;
     font-family: var(--fuente);
 }
 
@@ -24,9 +25,12 @@ p{
     color: var(--color-secundario);
 }
 
+a{text-decoration: none;}
+
 .contenedor {
     display: grid;
     gap: 20px;
+    grid-template-rows: repeat(6, auto);
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "header        header          header"
                         "imagen         imagen          imagen"
@@ -41,10 +45,24 @@ p{
     display: flex;
     justify-content: space-between;
     box-shadow: 0px 0px 30px var(--shadow);
+    transition: .3s all ease-in-out;
+}
+
+.header2{
+    position: fixed;
+    width: 100%;
+    background: var(--background);
+    z-index: 1;
+}
+
+.header2 .header__logo{
+    width: 9.375rem;
+    padding: 5px;
+    margin-left: 50px;
 }
 
 .header__logo{
-    width: 220px;
+    width: 13.75rem;
     height: auto;
     padding: 10px;
     margin-left: 20px;
@@ -54,7 +72,6 @@ p{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    flex-direction: row;
     margin-right: 20px;
 }
 
@@ -76,11 +93,14 @@ p{
     color: var(--white);
 }
 
+.parallax, .informacion, .lenguajes, .contacto{max-width: 1600px; margin: 0 auto}
+
 .parallax{
     grid-area: imagen;
     position: relative;
     height: 600px;
     overflow: hidden;
+    width: 100%;
 }
 
 .parallax__imagen{
@@ -91,9 +111,9 @@ p{
 }
 
 .parallax__titulo{
+    width: 20%;
     padding: 10px;
     min-width: 270px;
-    max-width: 20%;
     display: flex;
     color: var(--color);
     margin: 200px 40% 0;
@@ -108,12 +128,12 @@ p{
 .informacion{
     grid-area: informacion;
     max-width: 900px;
-    margin: 0 auto;
+    margin: 10px auto;
     padding: 0px 30px 0;
 }
 
 .informacion__titulo{
-    margin: 0 0 10px;
+    margin: 0px 0 10px;
     padding: 20px 0;
     color: var(--color);
     font-size: 38px;
@@ -144,6 +164,8 @@ p{
     height: auto;
     border-radius: 100%;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 .lenguajes {
@@ -157,7 +179,7 @@ p{
 .contacto{
     grid-area: contacto;
     width: 50%;
-    margin: 0 25%;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -179,15 +201,17 @@ p{
     padding: 10px;
     outline: none;
     border-radius: 5px;
+    margin: 5px 0;
     border: 3px solid var(--shadow);
 }
 
 .contacto__boton{
+    cursor: pointer;
     min-height: 45px;
     min-width: 200px;
+    margin: 5px 0;
     border-radius: 100px;
     border: 3px solid var(--shadow);
-    cursor: pointer;
     transition: .3s all ease-in-out;
 }
 
@@ -196,8 +220,107 @@ p{
     background-color: var(--color);
 }
 
+footer p{
+    margin: 0;
+    padding: 0;
+}
+
 .footer {
     grid-area: footer;
-    min-height: 120px;
+    min-height: 130px;
     box-shadow: 0px 0px 30px var(--shadow);
+}
+
+.footer__iconos{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer__parrafo{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    flex-wrap: wrap;
+}
+
+.icono{
+    font-size: 2.1875rem;
+    line-height: 2.1875rem;
+    margin: 20px 0 10px;
+    padding: 10px;
+    width: 3.4375rem;
+    height: 3.4375rem;
+    cursor: pointer;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    color: var(--white);
+    background-color: var(--icono);
+    overflow: hidden;
+    transition: .3s all ease-in-out;
+}
+
+.icono:hover{
+    background-color: var(--white);
+    color: var(--icono);
+}
+
+.icono__subir{
+    margin: 0;
+    right: 10px;
+    bottom: 10px;
+    position: fixed;
+    background: transparent;
+    border: 1px solid var(--shadow);
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    backdrop-filter: blur(10px);
+}
+
+.icono__subir:hover{
+    background: var(--shadow);
+    color: var(--white);
+}
+
+.icono__nav{
+    margin: 0;
+    background: transparent;
+    color: var(--color);
+    display: none !important;
+}
+
+.icono__flex{display: flex !important}
+.icono__none{display: none !important}
+
+@media screen and (max-width: 1000px) {
+    .contacto{
+        width: 65%;
+    }
+}
+
+@media  (max-width: 890px) {
+    body{
+        font-size: 1.0625rem;
+    }
+    .informacion__primer--parrafo{
+        grid-template-columns: 1fr;
+        grid-template-areas: "izquierda"  "img";
+    }
+    .parallax{
+        height: 450px;
+    }
+    .parallax__titulo{
+        width: 60%;
+        margin: 150px 20% 0;
+    }
+    .contacto{
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 668px) {
+    .contacto{
+        width: 90%;
+    }
 }
