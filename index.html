@@ -63,27 +63,63 @@
             </div>
         </div>
 
-        <div class="contacto">
-            <h1 class="contacto__titulo informacion__titulo" id="contacto">Contáctame</h1>
+        <div class="formulario">
+            <h1 class="formulario__titulo informacion__titulo" id="contacto">Contáctame</h1>
             
-            <div><input type="text" class="contacto__inputs" id="" placeholder="Nombre*"></div>
+            <form action="" name="formulario" method="POST" class="formulario__form" id="formulario">
 
-            <div><input type="text" class="contacto__inputs" id="" placeholder="Correo*"></div>
+                <!-- Grupo nombre -->
+                <div class="formulario__grupo" id="grupo__nombre">
+                    <label for="nombre" class="formulario__label">Nombre</label>
+                    <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" id="nombre" name="nombre" placeholder="John Doe">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El nombre tiene que ser de 5 a 50 digitos, solo puede contener letras y no puede estar vacio.</p>
+                </div>
+                
+                <!-- Grupo correo -->
+                <div class="formulario__grupo" id="grupo__correo">
+                    <label for="correo" class="formulario__label">Correo Electrónico</label>
+                    <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" id="correo" name="correo" placeholder="correo@correo.com">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El correo solo puede contener letras, números, puntos, guiones, guion bajo, debe ser un correo valido y no puede estar vacio.</p>
+                </div>
+                
+                <!-- Grupo mensaje -->
+                <div class="formulario__grupo" id="grupo__mensaje">
+                    <label for="mensaje" class="formulario__label">Mensaje</label>
+                    <div class="formulario__grupo-input">
+                        <textarea name="mensaje" class="formulario__textarea" id="mensaje"  rows="5" name="mensaje" placeholder="Mensaje"></textarea>
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">Error: El mensaje solo puede contener letras, números, puntos, guiones, guion bajo y no puede estar vacio.</p>
+                </div>
 
-            <div><textarea name="" class="contacto__textarea" id=""  rows="5" placeholder="Mensaje"></textarea></div>
+                <div class="formulario__mensaje" id="grupo__mensaje-formulario">
+                    <p><i class="fas fa-exclamation-triangle"></i><b> Error:</b>por favor rellena el formulario corectamente.</p>
+                </div>
+                
+                <!-- Grupo boton -->
+                <div class="formulario__grupo formulario__grupo-btn-enviar">
+                    <input type="submit" class="formulario__btn" value="Enviar">
+                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+                </div>
 
-            <div><input type="submit" class="contacto__boton" id="" placeholder="Nombre"></div>
+            </form>
                 
         </div>
             
-            <a href="#" class="icono icono__subir icono__none" id="icono_subir"><i class="fas fa-chevron-up"></i></a>
+            <div class="icono icono__subir icono__none" id="icono_subir"><i class="fas fa-chevron-up"></i></div>
 
         <footer class="footer">
             <div class="footer__iconos">
-                <a href="#" class="icono"><i class=" fab fa-facebook-f"></i></a>
-                <a href="#" class="icono"><i class=" fab fa-twitter"></i></a>
-                <a href="#" class="icono"><i class=" fab fa-linkedin-in"></i></a>
-                <a href="#" class="icono"><i class=" fab fa-github"></i></a>
+                <a href="#" class="icono" title="Ir a Facebook"><i class=" fab fa-facebook-f"></i></a>
+                <a href="#" class="icono" title="Ir a Twitter"><i class=" fab fa-twitter"></i></a>
+                <a href="#" class="icono" title="Ir a Linkedin"><i class=" fab fa-linkedin-in"></i></a>
+                <a href="#" class="icono" title="Ir a Github"><i class=" fab fa-github"></i></a>
             </div>
             <div class="footer__parrafo">
                 <p>Portafolio Jhon Camargo.</p>
