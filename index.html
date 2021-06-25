@@ -17,13 +17,16 @@
                 <a href="http://jhoncamargo.000webhostapp.com/" class="header__enlace">
                     <img src="imagenes/logo_jhon_camargo.png" alt="" class="header__logo">
                 </a>
-                <i class="icono icono__nav fas fa-bars" id="icono_nav"></i>
+                <p class="error__ie" id="error__ie"></p>
                 <nav class="header__nav">
-                    <a href="#sobre_mi" class="header__enlaces">Sobre mí</a>
-                    <a href="#habilidades" class="header__enlaces">Habilidades</a>
-                    <a href="#contacto" class="header__enlaces">Contacto</a>
+                    <a href="#sobre_mi" class="header__enlaces"><i class="icono__nav fas fa-user"></i>Sobre mí</a>
+                    <a href="#habilidades" class="header__enlaces"><i class="icono__nav fas fa-toolbox"></i>Habilidades</a>
+                    <a href="#contacto" class="header__enlaces"><i class="icono__nav fas fa-id-badge"></i>Contacto</a>
                 </nav>
-        </header>
+                <div class="hamburguesa">
+                    <i class="icono icono__hamburguesa fas fa-bars" id="hamburguesa"></i>
+                </div>
+            </header>
         
         <section class="parallax" id="contenedor_parallax">
             <div>
@@ -37,7 +40,7 @@
                 <h1 class="informacion__titulo" id="sobre_mi">Sobre mí</h1>
                 <div class="informacion__primer--parrafo">
                     <div class="informacion__principal">
-                        <p>Soy Jhon Camargo, la persona que se trás estas lineas y formo parte de esa generación llamada centennials.</p>
+                        <p>Soy Jhon Camargo, la persona que se esconde trás estas lineas y formo parte de esa generación llamada centennials.</p>
                         
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae debitis reiciendis nobis voluptatum repellendus suscipit saepe dignissimos, dolores autem distinctio accusantium aspernatur odit nostrum? Nesciunt optio a inventore nihil quibusdam.</p>
                     </div>
@@ -101,7 +104,7 @@
                         <textarea name="mensaje" class="formulario__textarea" id="mensaje"  rows="5" name="mensaje" placeholder="Mensaje"></textarea>
                         <i class="formulario__validacion-estado fas fa-times-circle"></i>
                     </div>
-                    <p class="formulario__input-error">Error: El mensaje solo puede contener letras, números, puntos, guiones, guion bajo y no puede estar vacio.</p>
+                    <p class="formulario__input-error">El mensaje solo puede contener letras, números, puntos, guiones, guion bajo y no puede estar vacio.</p>
                 </div>
 
                 <div class="formulario__mensaje" id="grupo__mensaje-formulario">
@@ -117,8 +120,6 @@
             </form>
                 
         </div>
-            
-            <div class="icono icono__subir icono__none" id="icono_subir"><i class="fas fa-chevron-up"></i></div>
 
         <footer class="footer">
             <div class="footer__iconos">
@@ -134,9 +135,11 @@
             <p class="footer__parrafo">Está página fue desarrollada con Html, Css, JavaScript y Php.</p>
         </footer>
 
+        <div class="icono icono__subir icono__none" id="icono_subir"><i class="fas fa-chevron-up"></i></div>
+
     </div>
 
-    <script src="sweetalert2.js"></script>
+    <script src="js/navegador.js"></script>
     <script src="js/main.js"></script>
     <script src="js/validacion.js"></script>
 </body>
