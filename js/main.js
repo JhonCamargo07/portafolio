@@ -32,7 +32,7 @@
         if(document.documentElement.scrollTop > 100){
             iconoSubir.classList.remove("icono__none");
             iconoSubir.classList.add("icono__flex");
-            contenedorP.style.marginTop = altura - 40 + "px";
+            // contenedorP.style.marginTop = altura - 35 + "px";
         }else{
             iconoSubir.classList.remove("icono__flex");
             iconoSubir.classList.add("icono__none");
@@ -96,5 +96,54 @@
             }
         }
     });
+
+    //*------------------------------------------------------------
+    //!--------------------------- Enlaces ---------------------------
+    //*------------------------------------------------------------
+    var anchuraHeader = header.offsetHeight + header.clientHeight;
+    let informacion = document.querySelector('.informacion'),
+        habilidades = document.querySelector('.habilidades'),
+        formulario = document.querySelector('.formulario');
+    var informacionMarginTop = informacion.offsetTop,
+        habilidadesMarginTop = habilidades.offsetTop,
+        formularioMarginTop = formulario.offsetTop,
+        enlace_sobre_mi = document.getElementById('sobre_mi'),
+        enlace_habilidades = document.getElementById('habilidades'),
+        enlace_contacto = document.getElementById('contacto');
+
+
+        // if(header.offsetHeight === header.clientHeight){
+        //     alert('Hola mundo');
+        // }
+    
+    var direccionEnlaces = (direcion, reducir) => {
+        window.scrollTo({
+            top: direcion - reducir,
+            behavior: "smooth"
+        });
+    };
+    enlace_sobre_mi.addEventListener("click", () => {direccionEnlaces(informacionMarginTop, anchuraHeader);});
+    enlace_habilidades.addEventListener("click", () => {direccionEnlaces(habilidadesMarginTop, anchuraHeader);});
+    enlace_contacto.addEventListener("click", () => {direccionEnlaces(formularioMarginTop, anchuraHeader);});
+    // console.log("la altura de about es de " + informacionMarginTop);
+    // console.log("la altura de habilidades es de " + habilidadesMarginTop);
+    // console.log("la altura de contacto es de " + formularioMarginTop);
+    // console.log("la altura del header es de " + anchuraHeader);
+    
+    
+    // var header = document.getElementById("header"); var anchura = header.offsetHeight;console.log(anchura); 
+    // console.log(anchuraHeader.clientHeight);
+    // window.onload = function() { console.log(anchura);} 
+    // header.addEventListener("click", function() { console.log(anchura);})
+
+
+    // enlace_sobre_mi.addEventListener("click", () => {
+    //     window.scrollTo({
+    //         top: informacionMarginTop - anchura,
+    //         behavior: "smooth"
+    //     });
+    //     console.log("Se dio click en about");
+    // })
+    // console.log(informacionMarginTop);
 
 }())

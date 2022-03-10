@@ -17,6 +17,6 @@
         var IE = document.getElementById('error__ie');
 
         IE.innerHTML = "Si estás en Internet Explorer, intenta usar otro navegador como Firefox, Chrome o cualquier otro, ya que Internet Explorer NO es compatible con la página. Esto sucede porque Internet Explorer no soporta las nuevas tecnologías.";
-        IE.classList.add('error__ie-blobk');
+        IE.classList.add('error__ie');
     }
 }())
