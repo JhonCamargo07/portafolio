@@ -11,8 +11,8 @@
             </div>
             <p class="footer__parrafo">Está página fue desarrollada con html, css, javaScript y php</p>
             <div class="footer__parrafo">
-                <a href="" class="enlace__footer">Aviso legal</a>
-                <a href="" class="enlace__footer">Proyectos</a>
+                <a href="aviso-legal.php" class="enlace__footer">Aviso legal</a>
+                <a href="proyectos.php" class="enlace__footer">Proyectos</a>
                 <p></p>
             </div>
         </footer>

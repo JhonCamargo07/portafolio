@@ -1,20 +1,9 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="imagenes/mi_logo.png">
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Portafolio Jhon Camargo</title>
-</head>
-<body>
-
+<?php
+    $titulo = "Portafolio Jhon Camargo";
+    include('html.php');
+?>
     <div class="contenedor">
-        <?php
-            include('header.php');
-        ?>
+        <?php include('header.php'); ?>
         
         <!--!==============================================================-->
                     <!--!================= Imagen y mensaje de inicio =================-->
@@ -49,17 +38,29 @@
                     </div>
                 </div>
 
-                <!--*=========================== Sobre mí en lo profesional ===========================-->
-                <h2 class="informacion__subtitulo">En lo profesional...</h2>
-                <p>Durante mi aprendizaje he desarrollado distintos proyectos que me han servido como práctica y me han dado cierta experiencia en este ámbito. Mi lenguaje fuerte en el momento es php, en este he hecho distintos tipos de practicas y puedo arreglar rapidamente los problemas que surjan.
-                </p>
-
-                <p>Actualmente me encuentro haciendo un tecnólogo en el centro de formación Sena, pero mis metas de estudio no llegan hasta aquí, quiero hacer una especialización en ingenieria de sistemas. Aunque no cuento con un título en reparación de computadores, mi curiosidad me ha llevado a aprender muchas cosas en la parte del hardware, yo mismo he aprendido como hacerle mantemiento y reparar tanto el software como el hardware.</p>
-                
                 <!--*=========================== Sobre mi en lo personal ===========================-->
                 <h2 class="informacion__subtitulo">En lo personal...</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum doloribus dolorum nemo tempora, eos libero aliquam, fugiat saepe quam nostrum excepturi rerum ullam? Accusamus soluta ipsum distinctio voluptatibus autem possimus?
-                Libero quibusdam eaque facere quod eum exercitationem atque quam ex ducimus hic, deserunt veritatis deleniti dolorum ad iusto voluptatibus error fugit itaque. Sint tempora rem debitis perferendis excepturi officiis et?</p>
+                <p>
+                    Soy una persona tranquila, me gusta hacer deporte, algunos fines de semana salgo a trotar un rato. Me gusta escuchar música y más que solo escucharla, me gusta analizar las letras de cada canción. Me llama mucho la atención escuchar historias del pasado, anécdotas y mas aun si son llevadas a películas o series. 
+                </p>
+
+                <p>
+                    Aunque no leo mucho, estoy empezando a cultivar en mi el habito de leer. Me interesa un poco la política y aunque no sé mucho al respecto considero que esta debe estar en cada persona porque no hay nada más importante que elegir correctamente a las personas que liderarán el país.
+                </p>
+
+                <!--*=========================== Sobre mí en lo profesional ===========================-->
+                <h2 class="informacion__subtitulo">En lo profesional...</h2>
+                <p>
+                    Actualmente me encuentro haciendo un tecnólogo en el centro de formación Sena, pero mis metas de estudio no llegan hasta aquí, quiero hacer una especialización en ingenieria de sistemas. 
+                </p>
+
+                <p>
+                    Durante mi aprendizaje he desarrollado distintos proyectos que me han servido como práctica y me han dado cierta experiencia en este ámbito. Mi lenguaje fuerte en el momento es php, en este he hecho distintos tipos de prácticas y puedo arreglar rápidamente los problemas que surjan. Pero esto no quiere decir que no esté dispuesto a aprender más lenguajes, de hecho, me encantaría poder aprender tantas cosas de cada lenguaje y así mejorar mi conocimiento. Mientras tanto, iré aprendiendo poco a poco.
+                </p>
+
+                <p>
+                    Aunque no cuento con un título en reparación de computadores, mi curiosidad me ha llevado a aprender muchas cosas en la parte del hardware, yo mismo he aprendido como hacerle mantemiento y reparaciones a los computadores. Recuerdo que desde niño me ha gustado todo lo relacionado con software y hardware.
+                </p>
 
             </div>
         </div>
@@ -106,7 +107,7 @@
                         <input type="text" class="formulario__input" id="nombre" name="nombre" placeholder="John Doe" title="Solo se aceptan letras" >
                         <i class="formulario__validacion-estado fas fa-times-circle"></i>
                     </div>
-                    <p class="formulario__input-error">El nombre debe ser de 5 a 50 caracteres, solo puede contener letras y no puede estar vacio</p>
+                    <p class="formulario__input-error">El nombre debe ser de 7 a 60 caracteres, solo puede contener letras y no puede estar vacío</p>
                 </div>
                 
                 <!-- Grupo correo -->
@@ -116,17 +117,27 @@
                         <input type="text" class="formulario__input" id="correo" name="correo" placeholder="correo@correo.com" title="Escribe un correo electronico valida para poder contactarme contigo">
                         <i class="formulario__validacion-estado fas fa-times-circle"></i>
                     </div>
-                    <p class="formulario__input-error">El correo solo puede contener letras, números, puntos, guiones, guion bajo, debe ser un correo valido y no puede estar vacio</p>
+                    <p class="formulario__input-error">El correo solo puede contener letras, números, puntos, guiones, guion bajo, debe ser un correo valido y no puede estar vacío</p>
+                </div>
+                
+                <!-- Grupo asunto -->
+                <div class="formulario__grupo" id="grupo__asunto">
+                    <label for="asunto" class="formulario__label">Asunto <span class="required">*</span></label>
+                    <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" id="asunto" name="asunto" placeholder="Solicutud de tus servicios" title="Escribe el titulo o una breve descripción de tu mensaje">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El asunto debe ser de 10 a 100 caracteres, solo puede contener letras, números, puntos, guiones, guion bajo y no puede estar vacío</p>
                 </div>
                 
                 <!-- Grupo mensaje -->
                 <div class="formulario__grupo" id="grupo__mensaje">
                     <label for="mensaje" class="formulario__label">Mensaje <span class="required">*</span></label>
                     <div class="formulario__grupo-input">
-                        <textarea name="mensaje" class="formulario__textarea" id="mensaje"  rows="5" name="mensaje" placeholder="Mensaje" title="Describe cual es el motivo por el que me contactas"></textarea>
+                        <textarea name="mensaje" class="formulario__textarea" id="mensaje"  rows="5" name="mensaje" placeholder="Cuentame cual es el motivo por el que me contactas" title="Describe tu mensaje..."></textarea>
                         <i class="formulario__validacion-estado fas fa-times-circle"></i>
                     </div>
-                    <p class="formulario__input-error">El mensaje debe minimo 10 caracteres, solo puede contener letras, números, puntos, guiones, guion bajo y no puede estar vacio</p>
+                    <p class="formulario__input-error">El mensaje debe minimo 10 caracteres, solo puede contener letras, números, puntos, guiones, guion bajo y no puede estar vacío</p>
                 </div>
 
                 <div class="formulario__mensaje" id="formulario__mensaje">
@@ -135,7 +146,7 @@
                 
                 <!-- Grupo boton -->
                 <div class="formulario__grupo formulario__grupo-btn-enviar">
-                    <button type="submit" class="formulario__btn">Enviar</button>
+                    <button type="submit" name="enviar" class="formulario__btn">Enviar</button>
                     <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
                 </div>
 
@@ -146,9 +157,7 @@
         <!--!==============================================================-->
                     <!--!================= Píe de página =================-->
         <!--!==============================================================-->
-        <?php
-            include('footer.php');
-        ?>
+        <?php include('footer.php'); ?>
 
         <!--*=========================== Boton ir a arriba ===========================-->
         <div class="icono icono__subir icono__none" id="icono_subir"><i class="fas fa-chevron-up"></i></div>
@@ -157,7 +166,7 @@
 
     <!--*=========================== Traer los archivos js que se requiere ===========================-->
     <?php
-        require('filesJS.php');
+        include('filesJS.php');
+        include('fin-html.php');
+        include('controller/correo.php');
     ?>
-</body>
-</html>

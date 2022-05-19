@@ -8,14 +8,16 @@
     const inputs = document.querySelectorAll('#formulario input, textarea');
 
     const expresiones = {
-        nombre: /^[a-zA-ZÀ-ÿ\s]{5,50}$/, // Letras y espacios, pueden llevar acentos.
+        nombre: /^[a-zA-ZÀ-ÿ\s]{7,60}$/, // Letras y espacios, pueden llevar acentos.
         correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-        mensaje: /^[a-zA-ZÀ-ÿ0-9_.,+-\s/¿?!:@?]{10,10000}$/
+        asunto: /^[a-zA-ZÀ-ÿ0-9_.,+-\s/¿?!:@?]{10,100}$/,
+        mensaje: /^[a-zA-ZÀ-ÿ0-9_.,+-\s/¿?!:@?]{10,100000}$/
     }
 
     const campos = {
         nombre: false,
         correo: false,
+        asunto: false,
         mensaje: false
     }
 
@@ -27,6 +29,10 @@
 
             case "correo":
                 validarCampo(expresiones.correo, e.target, 'correo');
+                break;
+                
+            case "asunto":
+                    validarCampo(expresiones.asunto, e.target, 'asunto');
             break;
 
             case "mensaje":
@@ -83,8 +89,8 @@
     //     }
     // });
     formulario.addEventListener('submit', (e) => {
-        if(campos.nombre && campos.correo && campos.mensaje){
-            formulario.reset();
+        if(campos.nombre && campos.correo && campos.asunto && campos.mensaje){
+            // formulario.reset();
             document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
             document.getElementById('grupo__mensaje').classList.remove('formulario__grupo-textarea-correcto');
             document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
@@ -99,6 +105,7 @@
             
             campos[nombre] = false;
             campos[correo] = false;
+            campos[asunto] = false;
             campos[mensaje] = false;
 
         }else{

@@ -18,7 +18,7 @@
     background: var(--color);
     color: var(--white);
 } */
-
+.disclaimer{display: none;}
 body::-webkit-scrollbar{
     width: 7px;
 }
