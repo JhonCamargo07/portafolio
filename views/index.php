@@ -168,5 +168,5 @@
     <?php
         include('filesJS.php');
         include('fin-html.php');
-        include('controller/correo.php');
+        include('../controller/correo.php');
     ?>

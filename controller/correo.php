@@ -1,6 +1,6 @@
 <?php
     require_once('validacion.php');
-    require_once('model/correo.php');
+    require_once('../model/correo.php');
 
     /* ================ Si envian el formulario, entran aquí ================ */
     if(isset($_POST['enviar'])){
