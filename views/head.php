@@ -9,4 +9,3 @@
     <link rel="stylesheet" href="css/style.css">
     <title><?php echo $titulo; ?></title>
 </head>
-<body>

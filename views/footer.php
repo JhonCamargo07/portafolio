@@ -7,7 +7,7 @@
             </div>
             <div class="footer__parrafo">
                 <p>Portafolio <a href="" class="enlace__footer">Jhon Camargo</a></p>
-                <p>Versión 1.1 | Copyright © <?php echo date("Y")?></p>
+                <p>Versión 1.2 | Copyright © <?php echo date("Y")?></p>
             </div>
             <p class="footer__parrafo">Está página fue desarrollada con html, css, javaScript y php</p>
             <div class="footer__parrafo">
