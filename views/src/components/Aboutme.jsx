@@ -16,10 +16,11 @@ export default function Aboutme() {
 					</p>
 
 					<p>
-						Nací de uno de los tres países más bellos de la Tierra. Allí hay una explosión de vida. Miles de especies
-						multicolores en los mares, en los cielos, en las tierras... crecí en la tierra de las mariposas amarillas
-						y de la magia. Mi país es bello porque tiene la Selva Amazónica, la del Chocó, las aguas, las cordilleras
-						de los Andes, y los océanos. Soy Colombiano.
+						Nac&#237; de uno de los tres pa&#237;ses m&#225;s bellos de la Tierra. All&#237; hay una explosi&#243;n de
+						vida. Miles de especies multicolores en los mares, en los cielos, en las tierras... crec&#237; en la
+						tierra de las mariposas amarillas y de la magia. Mi pa&#237;s es bello porque tiene la Selva
+						Amaz&#243;nica, la del Choc&#243;, las aguas, las cordilleras de los Andes, y los oc&#233;anos. Soy
+						Colombiano.
 					</p>
 
 					<p>
