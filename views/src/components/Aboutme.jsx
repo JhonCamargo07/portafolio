@@ -1,33 +1,35 @@
 import React from 'react';
 import ImgProfile from '../assets/img/foto.jpeg';
+import { FormattedMessage } from 'react-intl';
 
 export default function Aboutme() {
 	return (
 		<>
 			{/* <!--*=========================== Sobre mí ===========================--> */}
 			<h1 className="informacion__titulo" id="sobre_mi">
-				Sobre mí
+				<FormattedMessage id="information.about.title" defaultMessage="About me" />
 			</h1>
 			<div className="informacion__primer--parrafo">
 				<div className="informacion__principal">
 					<p>
-						Soy Jhon Camargo, la persona que se esconde tras estas l&#237;neas y pertenezco a esa generaci&#243;n que
-						llaman centennials.
+						<FormattedMessage
+							id="information.about.p1"
+							defaultMessage="I was born in one of the three most beautiful countries on Earth. There is an explosion of life there. Thousands of multicolored species in the seas, in the skies, in the lands... I grew up in the land of yellow butterflies and magic. This country is beautiful because it has the Amazon jungle, the Choco jungle, the waters, the Andes mountain ranges, and the oceans. I am Colombian."
+						/>
 					</p>
 
 					<p>
-						Nac&#237; de uno de los tres pa&#237;ses m&#225;s bellos de la Tierra. All&#237; hay una explosi&#243;n de
-						vida. Miles de especies multicolores en los mares, en los cielos, en las tierras... crec&#237; en la
-						tierra de las mariposas amarillas y de la magia. Mi pa&#237;s es bello porque tiene la Selva
-						Amaz&#243;nica, la del Choc&#243;, las aguas, las cordilleras de los Andes, y los oc&#233;anos. Soy
-						Colombiano.
+						<FormattedMessage
+							id="information.about.p2"
+							defaultMessage="I was born in one of the three most beautiful countries on Earth. There is an explosion of life there. Thousands of multicolored species in the seas, in the skies, in the lands... I grew up in the land of yellow butterflies and magic. This country is beautiful because it has the Amazon jungle, the Choco jungle, the waters, the Andes mountain ranges, and the oceans. I am Colombian."
+						/>
 					</p>
 
 					<p>
-						Crec&#237; en un mundo en donde la tecnolog&#237;a innovaba cada d&#237;a, vi como cambiamos del celular
-						de teclas al Smartphone, vi como cada vez la tecnolog&#237;a estaba m&#225;s presente en nuestro d&#237;a
-						a d&#237;a. Hasta el d&#237;a de hoy, en donde todo se mueve a partir de ella. Me alegra poder ser parte
-						de esta era y contribuir con mi conocimiento.
+						<FormattedMessage
+							id="information.about.p3"
+							defaultMessage="I grew up in a world where technology innovated every day, I saw how we changed from the keypad cell phone to the Smartphone, I saw how technology was more and more present in our daily lives. Until today, where everything moves from it. I am glad to be part of this era and contribute with my knowledge."
+						/>
 					</p>
 				</div>
 
