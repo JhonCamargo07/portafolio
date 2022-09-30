@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import MessageEnglish from './../lang/en-US.json';
-import MessageSpanish from './../lang/es-CO.json';
+import MessageEnglish from '../lang/en-US.json';
+import MessageSpanish from '../lang/es-CO.json';
 import { IntlProvider } from 'react-intl';
 
 const langContext = React.createContext();
@@ -25,17 +25,17 @@ const LangProvider = ({ children }) => {
 	const [message, setMessage] = useState(messageDefault);
 	const [locale, setLocale] = useState(localeDefault);
 
-	const establishLanguage = (language) => {
-		switch (language) {
+	const establishLanguage = () => {
+		switch (localStorage.getItem('lang')) {
 			case 'es-CO':
-				setMessage(MessageSpanish);
-				setLocale('es-CO');
-				localStorage.setItem('lang', 'es-CO');
-				break;
-			case 'en-US':
 				setMessage(MessageEnglish);
 				setLocale('en-US');
 				localStorage.setItem('lang', 'en-US');
+				break;
+			case 'en-US':
+				setMessage(MessageSpanish);
+				setLocale('es-CO');
+				localStorage.setItem('lang', 'es-CO');
 				break;
 			default:
 				setMessage(MessageEnglish);
@@ -44,9 +44,26 @@ const LangProvider = ({ children }) => {
 		}
 	};
 
+	const establishDark = () => {
+		switch (localStorage.getItem('dark')) {
+			case 'dark':
+				document.body.classList.add('light');
+				localStorage.setItem('dark', 'light');
+				break;
+			case 'light':
+				document.body.classList.remove('light');
+				localStorage.setItem('dark', 'dark');
+				break;
+			default:
+				document.body.classList.remove('light');
+				localStorage.setItem('dark', 'dark');
+		}
+	};
+
 	return (
-		<langContext.Provider value={{ establishLanguage: establishLanguage }}>
+		<langContext.Provider value={{ establishLanguage: establishLanguage, establishDark: establishDark }}>
 			<IntlProvider locale={locale} messages={message}>
+				{establishDark()}
 				{children}
 			</IntlProvider>
 		</langContext.Provider>

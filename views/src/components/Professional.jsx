@@ -1,46 +1,47 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
 export default function Professional() {
 	return (
 		<>
-			{/* <!--*=========================== Sobre mí en lo profesional ===========================--> */}
-			<h2 className="informacion__subtitulo">En lo profesional...</h2>
+			{/* <!--*=========================== About me professionally ===========================--> */}
+			<h2 className="informacion__subtitulo">
+				<FormattedMessage id="information.about.professional" defaultMessage="Professionally..." />
+			</h2>
 
 			<p>
-				En el 2022 particip&#233; en la competencia m&#225;s grande que tiene el Sena, SenaSoft. Es una hackathon en la
-				que se re&#250;nen los mejores programadores de todo el pa&#237;s para resolver una prueba que asignan empresas
-				del sector productivo. En esta competencia hab&#237;a muchas categor&#237;as, yo particip&#233; en la
-				categor&#237;a de desarrollo libre junto con una colega programadora. El reto que nos asignaron fue realizar un
-				juego, con el cual logramos posicionarnos en el puesto n&#250;mero 6. En esta categor&#237;a participaron 27
-				equipos.
+				<FormattedMessage
+					id="information.about.professional.p1"
+					defaultMessage="In 2022 I participated in the biggest competition that Sena has, SenaSoft. It is a hackathon in which the best programmers from all over the country meet to solve a test assigned by companies in the productive sector. In this competition there were many categories, I participated in the category of free development along with a fellow programmer. The challenge we were assigned was to make a game, with which we managed to position ourselves in the number 6 position. Twenty-seven teams participated in this category."
+				/>
 			</p>
 
 			<p>
-				Participar en esta competencia me hizo darme cuenta de las falencias que en ese momento ten&#237;a, as&#237; que
-				desde el momento en que culmin&#243; la hackathon comenc&#233; a trabajar en ellas. Me enorgullece enormemente
-				poder decir que particip&#233; en SenaSoft porque fue el resultado de mi esfuerzo, amor y dedicaci&#243;n a esta
-				gran industria. Y aunque el resultado no fue el esperado, gan&#233; mucho m&#225;s de lo que tal vez perd&#237;.
-				De eso se trata &#191;no? De aprender de los fracasos, as&#237; que estoy seguro que de ellos aprend&#237;.
+				<FormattedMessage
+					id="information.about.professional.p2"
+					defaultMessage="Participating in this competition made me realize the shortcomings that I had at that time, so from the moment the hackathon ended I started working on them. I am very proud to say that I participated in SenaSoft because it was the result of my effort, love and dedication to this great industry. And although the result was not what I expected, I gained much more than what I might have lost. That's what it's all about, isn't it? Learning from failures, so I'm sure I learned from them."
+				/>
 			</p>
 
 			<p>
-				Actualmente me encuentro haciendo un tecn&#243;logo en el centro de formaci&#243;n Sena, pero mis metas de estudio
-				no llegan hasta aqu&#237;, quiero hacer una especializaci&#243;n en ingenier&#237;a de sistemas.
+				<FormattedMessage
+					id="information.about.professional.p3"
+					defaultMessage="I am currently doing a technologist at the Sena training center, but my study goals do not go this far, I want to do a specialization in systems engineering."
+				/>
 			</p>
 
 			<p>
-				Durante los a&#241;os que llevo como programador he desarrollado distintos proyectos por mi cuenta que me han
-				servido como pr&#225;ctica y me han dado experiencia en este &#225;mbito. No tengo un lenguaje de
-				programaci&#243;n definido, me va muy bien en JAVA, PHP, Python, JavaScript, pero a qui&#233;n m&#225;s amor le
-				tengo es a Python. Cada d&#237;a aprendo cosas nuevas, me gusta estar investigando las nuevas tecnolog&#237;as,
-				nunca paro de aprender.
+				<FormattedMessage
+					id="information.about.professional.p4"
+					defaultMessage="During the years that I have been a programmer I have developed different projects on my own that have served me as practice and have given me experience in this field. I don't have a defined programming language, I do very well in JAVA, PHP, Python, JavaScript, but the one I love the most is Python. Every day I learn new things, I like to be investigating new technologies, I never stop learning."
+				/>
 			</p>
 
 			<p>
-				Aunque no cuento con un t&#237;tulo en reparaci&#243;n de computadores, mi curiosidad me ha llevado a aprender
-				muchas cosas en la parte del hardware. Yo mismo he aprendido como hacerles mantenimiento y reparaciones a los
-				computadores, tanto as&#237; que logr&#233; por mi mismo armar mi primera pc gamer. Recuerdo que desde ni&#241;o
-				me ha gustado todo lo relacionado con software y hardware.
+				<FormattedMessage
+					id="information.about.professional.p5"
+					defaultMessage="Although I don't have a degree in computer repair, my curiosity has led me to learn many things in the hardware part. I myself have learned how to do maintenance and repairs to computers, so much so that I managed to build my first gamer pc by myself. I remember that since I was a kid I have liked everything related to software and hardware."
+				/>
 			</p>
 		</>
 	);

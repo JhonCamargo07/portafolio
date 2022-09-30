@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import ImgHtml from '../assets/img/html.png';
 import ImgCss from '../assets/img/css.png';
 import ImgMD from '../assets/img/markdown.png';
@@ -20,7 +21,9 @@ export default function Lenguages() {
 	return (
 		<>
 			<div className="habilidades" id="habilidades">
-				<h1 className="formulario__titulo informacion__titulo">Habilidades</h1>
+				<h1 className="formulario__titulo informacion__titulo">
+					<FormattedMessage id="skills.title" defaultMessage="Skills" />
+				</h1>
 				{/* <!--*=========================== Imagenes de los lenguajes ===========================--> */}
 				<div className="habilidades__imagenes">
 					<div className="habilidades__img--div">

@@ -1,24 +1,27 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
 export default function Form() {
 	return (
 		<>
 			<div className="formulario margin-bottom mb-4" id="contacto">
-				<h1 className="formulario__titulo informacion__titulo">Contáctame</h1>
+				<h1 className="formulario__titulo informacion__titulo">
+					<FormattedMessage id="form.title" defaultMessage="Portfolio" />
+				</h1>
 				{/* <!--*=========================== Inicio formulario ===========================--> */}
 				<form action="" method="POST" name="formulario" className="formulario__form" id="formulario">
 					{/* <!-- Grupo nombre --> */}
 					<div className="formulario__grupo" id="grupo__nombre">
 						<label className="formulario__label px-0">
-							Nombre <span className="required">*</span>
+							<FormattedMessage id="form.label.name" defaultMessage="Name" />
+							<span className="required"> *</span>
 							<div className="formulario__grupo-input">
 								<input
 									type="text"
 									className="formulario__input"
 									id="nombre"
 									name="nombre"
-									placeholder="John Doe"
-									title="Solo se aceptan letras"
+									placeholder={<FormattedMessage id="form.input.name" defaultMessage="John Doe" />}
 								/>
 								<i className="formulario__validacion-estado fas fa-times-circle"></i>
 							</div>
@@ -31,7 +34,7 @@ export default function Form() {
 					{/* <!-- Grupo correo --> */}
 					<div className="formulario__grupo" id="grupo__correo">
 						<label className="formulario__label px-0">
-							Correo Electr&#243;nico <span className="required">*</span>
+							<FormattedMessage id="form.label.email" defaultMessage="Email" /> <span className="required">*</span>
 							<div className="formulario__grupo-input">
 								<input
 									type="text"
@@ -53,7 +56,8 @@ export default function Form() {
 					{/* <!-- Grupo asunto --> */}
 					<div className="formulario__grupo" id="grupo__asunto">
 						<label className="formulario__label px-0">
-							Asunto <span className="required">*</span>
+							<FormattedMessage id="form.label.motive" defaultMessage="Motive" />{' '}
+							<span className="required">*</span>
 							<div className="formulario__grupo-input">
 								<input
 									type="text"
@@ -75,7 +79,8 @@ export default function Form() {
 					{/* <!-- Grupo mensaje --> */}
 					<div className="formulario__grupo" id="grupo__mensaje">
 						<label className="formulario__label px-0">
-							Mensaje <span className="required">*</span>
+							<FormattedMessage id="form.label.message" defaultMessage="Message" />{' '}
+							<span className="required">*</span>
 							<div className="formulario__grupo-input">
 								<textarea
 									name="mensaje"
@@ -103,7 +108,7 @@ export default function Form() {
 					{/* <!-- Grupo boton --> */}
 					<div className="formulario__grupo formulario__grupo-btn-enviar">
 						<button type="submit" name="enviar" className="formulario__btn">
-							Enviar
+							<FormattedMessage id="form.buttom" defaultMessage="Send" />
 						</button>
 						<p className="formulario__mensaje-exito" id="formulario__mensaje-exito">
 							Formulario enviado exitosamente!

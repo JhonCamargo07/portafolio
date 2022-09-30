@@ -1,22 +1,26 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
 export default function Personal() {
 	return (
 		<>
-			{/* <!--*=========================== Sobre mi en lo personal ===========================--> */}
-			<h2 className="informacion__subtitulo">En lo personal...</h2>
+			{/* <!--*=========================== About me personalilly ===========================--> */}
+			<h2 className="informacion__subtitulo">
+				<FormattedMessage id="information.about.personal" defaultMessage="Personally..." />
+			</h2>
 
 			<p>
-				Soy una persona tranquila, me gusta hacer deporte, algunos fines de semana salgo a trotar. Me gusta escuchar
-				m&#250;sica y m&#225;s que solo escucharla, me gusta analizar las letras de cada canci&#243;n. Me llama mucho la
-				atenci&#243;n escuchar historias del pasado, an&#233;cdotas y m&#225;s a&#250;n si son llevadas a pel&#237;culas o
-				series.
+				<FormattedMessage
+					id="information.about.personal.p1"
+					defaultMessage="I am a quiet person, I like to do sports, some weekends I go jogging. I like to listen to music and more than just listen to it, I like to analyze the lyrics of each song. I am very interested in listening to stories from the past, anecdotes and even more if they are taken to movies or series."
+				/>
 			</p>
 
 			<p>
-				Aunque no leo mucho, estoy empezando a cultivar en m&#237; el h&#225;bito de leer. Me interesa un poco la
-				pol&#237;tica y aunque no s&#233; mucho al respecto considero que esta debe estar en cada persona porque no hay
-				nada m&#225;s importante que elegir correctamente a las personas que liderar&#225;n el pa&#237;s.
+				<FormattedMessage
+					id="information.about.personal.p2"
+					defaultMessage="Although I do not read much, I am beginning to cultivate the habit of reading. I am a little interested in politics and although I don't know much about it I consider that it should be in every person because there is nothing more important than choosing correctly the people who will lead the country."
+				/>
 			</p>
 		</>
 	);

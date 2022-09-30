@@ -1,22 +1,30 @@
-// (function(){
-//     function navegador(){
-//         var agente = navigator.userAgent;
-//         var navegadores = ["Chrome", "Firefox", "Safari", "Opera", "Trident", "MSIE", "Edge"];
+(function () {
+	if (!localStorage.getItem('lang')) {
+		localStorage.setItem('lang', 'en-US');
+	}
+	if (!localStorage.getItem('dark')) {
+		localStorage.setItem('dark', 'dark');
+	}
+	function navegador() {
+		var agente = navigator.userAgent;
+		var navegadores = ['Chrome', 'Firefox', 'Safari', 'Opera', 'Trident', 'MSIE', 'Edge'];
 
-//         for(var i in navegadores){
-//             if(agente.indexOf( navegadores[i] ) != -1)
-//             return navegadores[i];
-//         }
-//     }
+		for (var i in navegadores) {
+			if (agente.indexOf(navegadores[i]) !== -1) return navegadores[i];
+		}
+	}
 
-//     navegador();
+	navegador();
 
-//     var browser = navegador();
-//     if(browser == "Trident"){
-//         alert("¿Estás en Internet Explorer? Este navegador no es compatible con la página, intenta usar otro como Firefox, Chrome o cualquier otro.");
-//         var IE = document.getElementById('error__ie');
+	var browser = navegador();
+	if (browser === 'Trident') {
+		alert(
+			'¿Estás en Internet Explorer? Este navegador no es compatible con la página, intenta usar otro como Firefox, Chrome o cualquier otro.'
+		);
+		var IE = document.getElementById('error__ie');
 
-//         IE.innerHTML = "Si estás en Internet Explorer, intenta usar otro navegador como Firefox, Chrome o cualquier otro, ya que Internet Explorer NO es compatible con la página. Esto sucede porque Internet Explorer no soporta las nuevas tecnologías.";
-//         IE.classList.add('error__ie');
-//     }
-// }())
+		IE.innerHTML =
+			'Si estás en Internet Explorer, intenta usar otro navegador como Firefox, Chrome o cualquier otro, ya que Internet Explorer NO es compatible con la página. Esto sucede porque Internet Explorer no soporta las nuevas tecnologías.';
+		IE.classList.add('error__ie');
+	}
+})();

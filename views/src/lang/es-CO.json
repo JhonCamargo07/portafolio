@@ -12,9 +12,35 @@
 	"information.about.personal": "En lo personal...",
 	"information.about.personal.p1": "Soy una persona tranquila, me gusta hacer deporte, algunos fines de semana salgo a trotar. Me gusta escuchar m\u00fasica y m\u00e1s que solo escucharla, me gusta analizar las letras de cada canci\u00f3n. Me llama mucho la atenci\u00f3n escuchar historias del pasado, an\u00e9cdotas y m\u00e1s a\u00fan si son llevadas a pel\u00edculas o series.",
 	"information.about.personal.p2": "Aunque no leo mucho, estoy empezando a cultivar en m\u00ed el h\u00e1bito de leer. Me interesa un poco la pol\u00edtica y aunque no s\u00e9 mucho al respecto considero que esta debe estar en cada persona porque no hay nada m\u00e1s importante que elegir correctamente a las personas que liderar\u00e1n el pa\u00eds.",
+	"information.about.professional": "En lo profesional...",
 	"information.about.professional.p1": "En el 2022 particip\u00e9 en la competencia m\u00e1s grande que tiene el Sena, SenaSoft. Es una hackathon en la que se re\u00fanen los mejores programadores de todo el pa\u00eds para resolver una prueba que asignan empresas del sector productivo. En esta competencia hab\u00eda muchas categor\u00edas, yo particip\u00e9 en la categor\u00eda de desarrollo libre junto con una colega programadora. El reto que nos asignaron fue realizar un juego, con el cual logramos posicionarnos en el puesto n\u00famero 6. En esta categor\u00eda participaron 27 equipos.",
 	"information.about.professional.p2": "Participar en esta competencia me hizo darme cuenta de las falencias que en ese momento ten\u00eda, as\u00ed que desde el momento en que culmin\u00f3 la hackathon comenc\u00e9 a trabajar en ellas. Me enorgullece enormemente poder decir que particip\u00e9 en SenaSoft porque fue el resultado de mi esfuerzo, amor y dedicaci\u00f3n a esta gran industria. Y aunque el resultado no fue el esperado, gan\u00e9 mucho m\u00e1s de lo que tal vez perd\u00ed. De eso se trata \u00bfno? De aprender de los fracasos, as\u00ed que estoy seguro que de ellos aprend\u00ed.",
 	"information.about.professional.p3": "Actualmente me encuentro haciendo un tecn\u00f3logo en el centro de formaci\u00f3n Sena, pero mis metas de estudio no llegan hasta aqu\u00ed, quiero hacer una especializaci\u00f3n en ingenier\u00eda de sistemas.",
 	"information.about.professional.p4": "Durante los a\u00f1os que llevo como programador he desarrollado distintos proyectos por mi cuenta que me han servido como pr\u00e1ctica y me han dado experiencia en este \u00e1mbito. No tengo un lenguaje de programaci\u00f3n definido, me va muy bien en JAVA, PHP, Python, JavaScript, pero a qui\u00e9n m\u00e1s amor le tengo es a Python. Cada d\u00eda aprendo cosas nuevas, me gusta estar investigando las nuevas tecnolog\u00edas, nunca paro de aprender.",
-	"information.about.professional.p5": "Aunque no cuento con un t\u00edtulo en reparaci\u00f3n de computadores, mi curiosidad me ha llevado a aprender muchas cosas en la parte del hardware. Yo mismo he aprendido como hacerles mantenimiento y reparaciones a los computadores, tanto as\u00ed que logr\u00e9 por mi mismo armar mi primera pc gamer. Recuerdo que desde ni\u00f1o me ha gustado todo lo relacionado con software y hardware."
+	"information.about.professional.p5": "Aunque no cuento con un t\u00edtulo en reparaci\u00f3n de computadores, mi curiosidad me ha llevado a aprender muchas cosas en la parte del hardware. Yo mismo he aprendido como hacerles mantenimiento y reparaciones a los computadores, tanto as\u00ed que logr\u00e9 por mi mismo armar mi primera pc gamer. Recuerdo que desde ni\u00f1o me ha gustado todo lo relacionado con software y hardware.",
+
+	"error404.title": "Lo siento, p\u00e1gina no encontrada",
+	"error404.p1": "Pero no se preocupe, \u00a1Es solo un error 404!",
+	"error404.p2": "Es posible que lo que est\u00e1 buscando ya no exista o el enlace est\u00e1 mal escrito.",
+	"error404.buttom": "Volver a la página principal",
+
+	"skills.title": "Habilidades",
+
+	"form.title": "Cont\u00e1ctame",
+	"form.label.name": "Nombre",
+	"form.input.name": "John doe",
+	"form.label.email": "Correo Electr\u00f3nico",
+	"form.input.email": "correo@correo.com",
+	"form.label.motive": "Asunto",
+	"form.input.motive": "Solicitud de tus servicios",
+	"form.label.message": "Mensaje",
+	"form.input.message": "Cu\u00e9ntame cu\u00e1l es el motivo por el que me contactas",
+	"form.buttom": "Enviar",
+
+	"footer.description": "Portafolio ",
+	"footer.description.name": "Jhon Camargo",
+	"footer.technologies": "Esta p\u00e1gina fue desarrollada con React, Sass y PHP",
+	"footer.copyright": "Versi\u00f3n 2.0 | Copyright \u00a9",
+	"footer.notice.legal": "Aviso legal",
+	"footer.projects": "Proyectos"
 }
