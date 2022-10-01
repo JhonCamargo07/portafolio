@@ -5,6 +5,7 @@ import './assets/css/style.css';
 import Router from './router/Router';
 import { LangProvider } from './context/context.js';
 import './assets/js/navegador.js';
+// import './assets/js/main.js';
 
 ReactDOM.render(
 	<React.StrictMode>

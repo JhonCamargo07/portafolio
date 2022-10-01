@@ -37,6 +37,17 @@
 	"form.input.message": "Cu\u00e9ntame cu\u00e1l es el motivo por el que me contactas",
 	"form.buttom": "Enviar",
 
+	"form.input.name.empty": "Por favor ingresa tu nombre",
+	"form.input.name.incorrect": "El nombre solo puede contener letras y espacios",
+	"form.input.email.empty": "Por favor ingresa tu correo electr\u00f3nico",
+	"form.input.email.incorrect": "El correo solo puede tener letras, números, puntos, guiones y guion bajo",
+	"form.input.motive.empty": "Por favor ingresa el motivo por el que me contactas",
+	"form.input.motive.incorrect": "El asunto debe ser de 10 a 100 caracteres, solo puede contener letras, números, puntos, guiones y guion bajo",
+	"form.input.message.empty": "Por favor ingresa tu mensaje",
+	"form.input.message.incorrect": "El mensaje debe tener mínimo 10 caracteres, solo puede contener letras, números, puntos, guiones, guion bajo",
+	"form.message.incorrect": "Por favor rellena el formulario correctamente",
+	"form.message.correct": "\u00a1Formulario enviado exitosamente!",
+
 	"footer.description": "Portafolio ",
 	"footer.description.name": "Jhon Camargo",
 	"footer.technologies": "Esta p\u00e1gina fue desarrollada con React, Sass y PHP",

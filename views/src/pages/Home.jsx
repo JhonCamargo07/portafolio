@@ -12,11 +12,11 @@ function Home() {
 			<div className="contenedor">
 				<Header />
 				<Paralax />
+				<Information />
+				<Lenguages />
+				<Form />
+				<Footer />
 			</div>
-			<Information />
-			<Lenguages />
-			<Form />
-			<Footer />
 		</>
 	);
 }

@@ -1,5 +1,5 @@
 {
-	"paralax.title": "\u00a1Hello world!",
+	"paralax.title": "\u00a1Hello World!",
 
 	"header.about": "About me",
 	"header.skills": "Skills",
@@ -35,7 +35,19 @@
 	"form.input.motive": "Request for your services",
 	"form.label.message": "Message",
 	"form.input.message": "Please tell me why you are contacting me.",
-	"form.buttom": "Send",
+	"form.buttom": "Submit",
+
+	"form.input.name.empty": "Please enter your name",
+	"form.input.name.incorrect": "The name can only contain letters and spaces",
+	"form.input.email.empty": "Please enter your email address",
+	"form.input.email.incorrect": "Mail can only contain letters, numbers, periods, hyphens and underscores",
+	"form.input.motive.empty": "Please enter the reason why you are contacting me",
+	"form.input.motive.incorrect": "The motif must be between 10 and 100 characters long and can only contain letters, numbers, periods, hyphens and underscores",
+	"form.input.message.empty": "Please enter your message",
+	"form.input.message.incorrect": "The message must be at least 10 characters long, it can only contain letters, numbers, dots, hyphens, underscores, underscores, hyphens, and underscores",
+
+	"form.message.incorrect": "Please fill in the form correctly",
+	"form.message.correct": "\u00a1Form successfully submitted!",
 
 	"footer.description": "Portfolio ",
 	"footer.description.name": "Jhon Camargo",

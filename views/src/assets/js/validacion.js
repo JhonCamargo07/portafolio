@@ -1,18 +1,16 @@
-//*------------------------------------------------------------
-//!--------------------------- Validacion del formulario ---------------------------
-//*------------------------------------------------------------
+// // *------------------------------------------------------------
+// // !--------------------------- Validacion del formulario ---------------------------
+// // *------------------------------------------------------------
 
-// (function () {
+// (function() {
 // 	const formulario = document.getElementById('formulario');
 // 	const inputs = document.querySelectorAll('#formulario input, textarea');
 // 	const form = document.getElementById('formulario');
 
-// 	const expresiones = {
-// 		nombre: /^[a-zA-ZÀ-ÿ\s]{7,60}$/, // Letras y espacios, pueden llevar acentos.
-// 		correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-// 		asunto: /^[a-zA-ZÀ-ÿ0-9_.,+-\s/¿?!:@?]{10,100}$/,
-// 		mensaje: /^[a-zA-ZÀ-ÿ0-9_.,+-\s/¿?!:@?]{10,100000}$/,
-// 	};
+// 	const nombre = /^[a-zA-ZÀ-ÿ\s]{7,60}$/; // Letras y espacios, pueden llevar acentos.
+// 	const correo = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+// 	const asunto = /^[a-zA-ZÀ-ÿ0-9_.,+-\s/¿?!:@?]{10,100}$/;
+// 	const mensaje = /^[a-zA-ZÀ-ÿ0-9_.,+-\s/¿?!:@?]{10,100000}$/;
 
 // 	const campos = {
 // 		nombre: false,
@@ -24,19 +22,19 @@
 // 	const validarFormulario = (e) => {
 // 		switch (e.target.name) {
 // 			case 'nombre':
-// 				validarCampo(expresiones.nombre, e.target, 'nombre');
+// 				validarCampo(nombre, e.target, 'nombre');
 // 				break;
 
 // 			case 'correo':
-// 				validarCampo(expresiones.correo, e.target, 'correo');
+// 				validarCampo(correo, e.target, 'correo');
 // 				break;
 
 // 			case 'asunto':
-// 				validarCampo(expresiones.asunto, e.target, 'asunto');
+// 				validarCampo(asunto, e.target, 'asunto');
 // 				break;
 
 // 			case 'mensaje':
-// 				if (expresiones.mensaje.test(mensaje.value)) {
+// 				if (mensaje.test(mensaje.value)) {
 // 					inputMsgCorrecto();
 // 					campos.mensaje = true;
 // 				} else {

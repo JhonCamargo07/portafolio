@@ -10,11 +10,12 @@ import moon from './../assets/img/moon.svg';
 
 export default function Header() {
 	const lang = useContext(langContext);
-	// const [imgLang, setImgLang] = useState(localStorage.getItem('lang') === 'en-US' ? es : en);
+
 	const [altImg, setAltImg] = useState(localStorage.getItem('lang') === 'en-US' ? 'Ingl\u00e9s' : 'Spanish');
 	const [titleImg, setTitleImg] = useState(
 		localStorage.getItem('lang') === 'en-US' ? 'Change language to Spanish' : 'Cambiar idioma a ingl\u00e9s'
 	);
+	const [menuOpen, setMenuOpen] = useState(false);
 
 	const changeImgLang = () => {
 		const btn = document.querySelector('#btn');
@@ -36,6 +37,17 @@ export default function Header() {
 				btn.classList.remove('active');
 				setTitleImg('Change language to Spanish');
 			}
+		}
+	};
+
+	const toggleMenu = () => {
+		const enlaces = document.getElementsByClassName('header__nav')[0];
+		enlaces.classList.toggle('header__nav2');
+		enlaces.style.transtion = 'transform 0.5s ease-in-out all';
+		if (document.querySelector('.header__nav.header__nav2')) {
+			setMenuOpen(true);
+		} else {
+			setMenuOpen(false);
 		}
 	};
 
@@ -61,27 +73,35 @@ export default function Header() {
 							<FormattedMessage id="header.contact" defaultMessage="Contact" />
 						</NavLink>
 						<button
-							className="lang mx-2"
+							className="lang mx-2 header__nav--btn"
 							id="btn"
 							title={titleImg}
 							onClick={() => {
 								lang.establishLanguage();
 								changeImgLang();
-							}}>
+							}}
+						>
 							<img src={en} alt={altImg} />
 							<img src={es} alt={altImg} />
 						</button>
 						<button
-							className="switch"
+							className="switch header__nav--btn"
 							onClick={() => {
 								lang.establishDark();
-							}}>
+							}}
+						>
 							<img src={sun} alt="Light" title="Switch to light mode" />
 							<img src={moon} alt="Dark" title="Switch to dark mode" />
 						</button>
 					</nav>
 					<div className="hamburguesa">
-						<i className="icono icono__hamburguesa fas fa-bars" id="hamburguesa"></i>
+						<i
+							className="icono icono__hamburguesa fas fa-bars"
+							onClick={() => {
+								toggleMenu();
+							}}
+							id="hamburguesa"
+						></i>
 					</div>
 				</header>
 			</div>
