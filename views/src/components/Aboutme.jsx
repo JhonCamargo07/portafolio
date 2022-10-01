@@ -6,7 +6,7 @@ export default function Aboutme() {
 	return (
 		<>
 			{/* <!--*=========================== Sobre mí ===========================--> */}
-			<h1 className="informacion__titulo" id="sobre_mi">
+			<h1 className="informacion__titulo" id="aboutme1">
 				<FormattedMessage id="information.about.title" defaultMessage="About me" />
 			</h1>
 			<div className="informacion__primer--parrafo">

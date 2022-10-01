@@ -15,7 +15,7 @@ export default function Header() {
 	const [titleImg, setTitleImg] = useState(
 		localStorage.getItem('lang') === 'en-US' ? 'Change language to Spanish' : 'Cambiar idioma a ingl\u00e9s'
 	);
-	const [menuOpen, setMenuOpen] = useState(false);
+	// const [menuOpen, setMenuOpen] = useState(false);
 
 	const changeImgLang = () => {
 		const btn = document.querySelector('#btn');
@@ -44,13 +44,37 @@ export default function Header() {
 		const enlaces = document.getElementsByClassName('header__nav')[0];
 		enlaces.classList.toggle('header__nav2');
 		enlaces.style.transtion = 'transform 0.5s ease-in-out all';
-		if (document.querySelector('.header__nav.header__nav2')) {
-			setMenuOpen(true);
-		} else {
-			setMenuOpen(false);
-		}
+		// if (document.querySelector('.header__nav.header__nav2')) {
+		// 	setMenuOpen(true);
+		// } else {
+		// 	setMenuOpen(false);
+		// }
 	};
 
+	const goToSection = (nameSection) => {
+		const aboutPosition = document.getElementById('information').offsetTop;
+		const skillsPosition = document.getElementById('skills').offsetTop;
+		const formPosition = document.getElementById('form').offsetTop;
+		const headerHeight = document.getElementById('header').offsetHeight;
+		let position = 0;
+		switch (nameSection) {
+			case 'aboutme':
+				position = aboutPosition;
+				break;
+			case 'skills':
+				position = skillsPosition;
+				break;
+			case 'form':
+				position = formPosition - headerHeight;
+				break;
+			default:
+				position = 0;
+		}
+		window.scrollTo({
+			top: position - headerHeight,
+			behavior: 'smooth',
+		});
+	};
 	return (
 		<>
 			<div className="container">
@@ -60,15 +84,36 @@ export default function Header() {
 					</a>
 					<p id="error__ie"></p>
 					<nav className="header__nav">
-						<NavLink to="/" className="header__enlaces" id="sobre_mi">
+						<NavLink
+							to="/"
+							onClick={() => {
+								goToSection('aboutme');
+							}}
+							className="header__enlaces"
+							id="sobre_mi"
+						>
 							<i className="icono__nav fas fa-user"></i>
 							<FormattedMessage id="header.about" defaultMessage="About me" />
 						</NavLink>
-						<NavLink to="/skills" className="header__enlaces" id="habilidades">
+						<NavLink
+							to="/"
+							onClick={() => {
+								goToSection('skills');
+							}}
+							className="header__enlaces"
+							id="habilidades"
+						>
 							<i className="icono__nav fas fa-toolbox"></i>
 							<FormattedMessage id="header.skills" defaultMessage="Skills" />
 						</NavLink>
-						<NavLink to="/contact" className="header__enlaces" id="contacto">
+						<NavLink
+							to="/"
+							onClick={() => {
+								goToSection('form');
+							}}
+							className="header__enlaces"
+							id="contacto"
+						>
 							<i className="icono__nav fas fa-id-badge"></i>
 							<FormattedMessage id="header.contact" defaultMessage="Contact" />
 						</NavLink>

@@ -1,14 +1,39 @@
-import React from 'react';
-import img from './../assets/img/simpsons-ouh_negro.png';
+import React, { useState } from 'react';
+import imgBlack from './../assets/img/simpsons-ouh_negro.png';
+import imgWhite from './../assets/img/simpsons-ouh_blanco.png';
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
+import './../assets/css/error.css';
 
 export default function DivError404() {
+	const [imgError, setImgError] = useState(imgBlack);
+
+	window.addEventListener('click', () => {
+		changeImgError();
+	});
+	window.addEventListener('load', () => {
+		changeImgError();
+	});
+
+	const changeImgError = () => {
+		switch (localStorage.getItem('dark')) {
+			case 'dark':
+				setImgError(imgWhite);
+				break;
+			case 'light':
+				setImgError(imgBlack);
+				break;
+			default:
+				setImgError(imgWhite);
+				break;
+		}
+	};
+
 	return (
 		<>
 			<main className="error">
 				<div className="error__imagen">
-					<img src={img} loading="lazy" alt="Simbolo de error 403, homero simpsons" className="error__img" />
+					<img src={imgError} loading="lazy" alt="Simbolo de error 403, homero simpsons" className="error__img" />
 				</div>
 				<div className="error__informacion">
 					<h1 className="error__titulo">

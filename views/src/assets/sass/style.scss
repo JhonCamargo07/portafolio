@@ -1,5 +1,3 @@
-// @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
-
 $background: #0d1117;
 $segundo-bg: #181719;
 $white: #fff;
@@ -203,24 +201,27 @@ a {
 	margin-right: 1.25rem;
 	@include responsive(71.875rem) {
 		position: fixed;
-		top: 0px;
+		top: 0;
 		left: 0;
 		width: 30%;
 		z-index: 2;
 		min-height: 100%;
 		background: $background;
 		color: white;
-		box-shadow: 0rem 0rem 0.1875rem $shadow;
+		@include shadow($bg-title);
 		flex-direction: column;
 		align-items: flex-start;
 		justify-content: space-evenly;
 		transition: 0.5s all ease-in-out;
-		transform: translateX(-100%);
+		transform: translateX(-101%);
 		@include responsive(48rem) {
 			width: 35%;
 		}
 		@include responsive() {
 			width: 60%;
+		}
+		body-light & {
+			@include shadow($background);
 		}
 	}
 	&2 {

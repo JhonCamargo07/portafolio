@@ -187,15 +187,15 @@ body.light .header {
 @media screen and (max-width: 71.875rem) {
   .header__nav {
     position: fixed;
-    top: 0px;
+    top: 0;
     left: 0;
     width: 30%;
     z-index: 2;
     min-height: 100%;
     background: #0d1117;
     color: white;
-    -webkit-box-shadow: 0rem 0rem 0.1875rem rgba(0, 0, 0, 0.5);
-            box-shadow: 0rem 0rem 0.1875rem rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0rem 0rem 0.3125rem rgba(255, 255, 255, 0.3);
+            box-shadow: 0rem 0rem 0.3125rem rgba(255, 255, 255, 0.3);
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -208,8 +208,8 @@ body.light .header {
             justify-content: space-evenly;
     -webkit-transition: 0.5s all ease-in-out;
     transition: 0.5s all ease-in-out;
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    -webkit-transform: translateX(-101%);
+            transform: translateX(-101%);
   }
 }
 @media screen and (max-width: 71.875rem) and (max-width: 48rem) {
@@ -220,6 +220,12 @@ body.light .header {
 @media screen and (max-width: 71.875rem) and (max-width: 480px) {
   .header__nav {
     width: 60%;
+  }
+}
+@media screen and (max-width: 71.875rem) {
+  body-light .header__nav {
+    -webkit-box-shadow: 0rem 0rem 0.3125rem #0d1117;
+            box-shadow: 0rem 0rem 0.3125rem #0d1117;
   }
 }
 .header__nav2 {

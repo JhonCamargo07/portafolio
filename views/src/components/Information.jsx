@@ -6,7 +6,7 @@ import Professional from './Professional';
 export default function Information() {
 	return (
 		<>
-			<div className="informacion" id="informacion">
+			<div className="informacion" id="information">
 				<div className="informacion__parrafos">
 					<Aboutme />
 					<Personal />

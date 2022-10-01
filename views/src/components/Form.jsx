@@ -164,7 +164,7 @@ export default function Formulario() {
 				>
 					{({ errors }) => (
 						// action="" method="POST"
-						<Form className="formulario__form" name="formulario" id="formulario">
+						<Form className="formulario__form" name="formulario" id="form">
 							{/* <!-- Grupo name --> */}
 							<div className="formulario__grupo" id="grupo__name">
 								<label htmlFor="name" className="formulario__label px-0">

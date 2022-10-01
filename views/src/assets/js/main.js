@@ -46,16 +46,16 @@
 	// 	// *------------------------------------------------------------
 	// 	//!--------------------------- Enlaces ---------------------------
 	// 	//*------------------------------------------------------------
-	// 	var anchuraHeader = header.offsetHeight + header.clientHeight;
-	// 	let informacion = document.querySelector('.informacion'),
-	// 		habilidades = document.querySelector('.habilidades'),
-	// 		formulario = document.querySelector('.formulario');
-	// 	var informacionMarginTop = informacion.offsetTop,
-	// 		habilidadesMarginTop = habilidades.offsetTop,
-	// 		formularioMarginTop = formulario.offsetTop,
-	// 		enlace_sobre_mi = document.getElementById('sobre_mi'),
-	// 		enlace_habilidades = document.getElementById('habilidades'),
-	// 		enlace_contacto = document.getElementById('contacto');
+	var anchuraHeader = header.offsetHeight + header.clientHeight;
+	let informacion = document.querySelector('.informacion'),
+		habilidades = document.querySelector('.habilidades'),
+		formulario = document.querySelector('.formulario');
+	var informacionMarginTop = informacion.offsetTop,
+		habilidadesMarginTop = habilidades.offsetTop,
+		formularioMarginTop = formulario.offsetTop,
+		enlace_sobre_mi = document.getElementById('sobre_mi'),
+		enlace_habilidades = document.getElementById('habilidades'),
+		enlace_contacto = document.getElementById('contacto');
 	// 	// if(header.offsetHeight === header.clientHeight){
 	// 	//     alert('Hola mundo');
 	// 	// }

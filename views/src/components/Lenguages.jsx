@@ -20,7 +20,7 @@ import ImgGitHub from '../assets/img/github.png';
 export default function Lenguages() {
 	return (
 		<>
-			<div className="habilidades" id="habilidades">
+			<div className="habilidades" id="skills">
 				<h1 className="formulario__titulo informacion__titulo">
 					<FormattedMessage id="skills.title" defaultMessage="Skills" />
 				</h1>
