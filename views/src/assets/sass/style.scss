@@ -58,6 +58,21 @@ $font: 'Montserrat', sans-serif;
 	}
 }
 
+@mixin btn {
+	color: $black;
+	cursor: pointer;
+	font-weight: bold;
+	padding: 0.9375rem;
+	background: $white;
+	border-radius: 0.3125rem;
+	transition: 0.3s ease all;
+	border: 0.125rem solid transparent;
+	&:hover {
+		color: $white;
+		background-color: $primary;
+	}
+}
+
 @mixin shadow($color) {
 	box-shadow: 0rem 0rem 0.3125rem $color;
 }
@@ -873,6 +888,48 @@ footer p {
 }
 
 // /*!==============================================================*/
+/*!================= Error 404 =================*/
+// /*!==============================================================*/
+
+.error__container {
+	// flex($direction: column, $corte: wrap, $just, $align)
+	@include flex(row, wrap, space-evenly, center);
+	margin-top: 5.625rem;
+}
+
+.error__img {
+	margin: 0.3125rem 0.625rem;
+	@include responsive() {
+		height: 450px;
+	}
+}
+
+.error__information {
+	margin: 0.3125rem 0.9375rem 1.25rem;
+	overflow: hidden !important;
+	text-align: center;
+	& .error__title {
+		color: $primary;
+		// color: $white;
+		// body.light & {
+		// }
+	}
+}
+.error__link {
+	@include btn();
+	padding: 0.625rem 1.25rem;
+	body.light & {
+		color: $primary;
+		border: 0.125rem solid $primary;
+	}
+	body.light &:hover {
+		color: $white;
+		border: 0.125rem solid $primary;
+	}
+	// min-height: 35px;
+}
+
+// /*!==============================================================*/
 /*!================= Margenes =================*/
 // /*!==============================================================*/
 .mx-0 {
@@ -898,3 +955,15 @@ footer p {
 .mb-4 {
 	margin-bottom: 1.25rem;
 }
+
+// @media (prefers-color-scheme: light) {
+// 	body {
+// 		background-color: $secundary;
+// 	}
+// }
+
+// @media (prefers-color-scheme: dark) {
+// 	body {
+// 		background-color: $ba;
+// 	}
+// }

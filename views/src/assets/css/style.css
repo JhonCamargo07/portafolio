@@ -1024,6 +1024,67 @@ body.light .switch::after {
   z-index: 99999;
 }
 
+/*!================= Error 404 =================*/
+.error__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5.625rem;
+}
+
+.error__img {
+  margin: 0.3125rem 0.625rem;
+}
+@media screen and (max-width: 480px) {
+  .error__img {
+    height: 450px;
+  }
+}
+
+.error__information {
+  margin: 0.3125rem 0.9375rem 1.25rem;
+  overflow: hidden !important;
+  text-align: center;
+}
+.error__information .error__title {
+  color: #2a72c0;
+}
+
+.error__link {
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0.9375rem;
+  background: #fff;
+  border-radius: 0.3125rem;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+  border: 0.125rem solid transparent;
+  padding: 0.625rem 1.25rem;
+}
+.error__link:hover {
+  color: #fff;
+  background-color: #2a72c0;
+}
+body.light .error__link {
+  color: #2a72c0;
+  border: 0.125rem solid #2a72c0;
+}
+body.light .error__link:hover {
+  color: #fff;
+  border: 0.125rem solid #2a72c0;
+}
+
 /*!================= Margenes =================*/
 .mx-0 {
   margin-left: 0;

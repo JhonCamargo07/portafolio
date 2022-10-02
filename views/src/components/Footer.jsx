@@ -19,6 +19,19 @@ export default function Footer() {
 		});
 	};
 
+	document.oncontextmenu = () => {
+		return false;
+	};
+	// document.oncopy = () => {
+	// 	return false;
+	// };
+	// document.oncut = () => {
+	// 	return false;
+	// };
+	// document.onpaste = () => {
+	// 	return false;
+	// };
+
 	return (
 		<>
 			<footer className="footer">
