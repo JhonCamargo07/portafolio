@@ -7,6 +7,16 @@ import { Link } from 'react-router-dom';
 export default function DivError404() {
 	const [imgError, setImgError] = useState(imgBlack);
 
+	document.onload = () => {
+		changeImgError();
+	};
+	window.addEventListener('load', () => {
+		changeImgError();
+	});
+	window.addEventListener('click', () => {
+		changeImgError();
+	});
+
 	const changeImgError = () => {
 		switch (localStorage.getItem('dark')) {
 			case 'dark':
@@ -21,16 +31,6 @@ export default function DivError404() {
 		}
 	};
 
-	document.onload = () => {
-		changeImgError();
-	};
-
-	window.addEventListener('load', () => {
-		changeImgError();
-	});
-	window.addEventListener('click', () => {
-		changeImgError();
-	});
 	return (
 		<>
 			<main className="error">

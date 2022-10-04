@@ -11,8 +11,13 @@ $secundary: #fff;
 $orange: #ffa500;
 $shadow: rgba(0, 0, 0, 0.5);
 $bg-title: rgba(255, 255, 255, 0.3);
+$gray: #e9ecef;
+$bg-gray: #f7f7f8;
+$bg-blue: #0d111a;
+$blue: #181529;
 
 $font: 'Montserrat', sans-serif;
+$max-width: 1600px;
 
 :root {
 	--fuente: 'Montserrat', sans-serif;
@@ -39,7 +44,7 @@ $font: 'Montserrat', sans-serif;
 	}
 }
 
-@mixin flex($direction: column, $corte: wrap, $just, $align) {
+@mixin flex($direction: column, $corte: wrap, $just: center, $align: center) {
 	display: flex;
 	flex-flow: $direction $corte;
 	justify-content: $just;
@@ -265,7 +270,7 @@ a {
 .informacion,
 .lenguajes,
 .contacto {
-	max-width: 100rem;
+	max-width: $max-width;
 	margin: 0 auto;
 }
 
@@ -424,59 +429,92 @@ a {
 // /**--------------------------------------------------------------*/
 
 .habilidades {
+	width: 100%;
+	margin: auto;
 	grid-area: lenguajes;
-	margin: 0.625rem auto;
-	@include responsive(26.875rem) {
-		margin: 0.3125rem;
+	padding: 0 1.875rem;
+	max-width: $max-width;
+	@include responsive() {
+		padding: 0 0.625rem;
+	}
+	& .habilidades__content {
+		@include grid(2, 0.625rem);
+		// grid-template-rows: auto;
+		margin: 0.9375rem 0.625rem 0.3125rem;
+		// background: $segundo-bg;
+		border-radius: 0.625rem;
+		@include responsive(56.25rem) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+
+		& .habilidades__div {
+			border-radius: 10px;
+			margin-top: 0.375rem;
+			background: $bg-blue;
+			border: 1px solid $blue;
+			@include flex(row, no-wrap, flex-start, center);
+			body.light & {
+				background: $bg-gray;
+				border: 1px solid $gray;
+			}
+			& .habilidades__div--img img {
+				width: 5.625rem;
+			}
+			& .habilidades__div--text {
+				width: 79%;
+				font-size: 0.9375rem;
+				@include responsive() {
+					padding-left: 5px;
+				}
+				& p {
+					margin-bottom: 0;
+					padding: 5px 0;
+				}
+				& .habilidades__progress {
+					border-radius: 5px;
+					height: 1.25rem;
+					background: $gray;
+					padding: 0;
+					& .habilidades__progress--porcent {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						background: $primary;
+						height: 100%;
+						font-size: 0.8125rem;
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+
+	& .habilidades__img {
+		width: 9.375rem;
+		height: auto;
+		padding: 0.625rem;
+		margin: 0 auto;
+		filter: drop-shadow(0.1875rem 0.1875rem 0.1875rem $secundary);
+		@include responsive(41.75rem) {
+			width: 8.75rem;
+		}
+		@include responsive(26.875rem) {
+			width: 8.4375rem;
+		}
 	}
 }
 
-.habilidades__imagenes {
-	@include grid(4, 1.25rem);
-	// display: grid;
-	// gap: 1.25rem;
-	// grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: auto;
-	margin: 0.3125rem 0.625rem;
-	@include responsive(41.75rem) {
-		grid-template-columns: repeat(3, 1fr);
-	}
-	@include responsive(26.875rem) {
-		grid-template-columns: repeat(2, 1fr);
-	}
-	@include responsive(18.75rem) {
-		grid-template-columns: 1fr;
-	}
+.expert {
+	width: 100%;
 }
-
-.habilidades__img--div {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.advanced {
+	width: 80%;
 }
-
-.img__centro {
-	grid-column: span 3;
-	@include responsive(41.75rem) {
-		grid-column: span 2;
-	}
-	@include responsive(18.75rem) {
-		grid-column: span 1;
-	}
+.intermediate {
+	width: 61%;
 }
-
-.habilidades__img {
-	width: 9.375rem;
-	height: auto;
-	padding: 0.625rem;
-	margin: 0 auto;
-	filter: drop-shadow(0.1875rem 0.1875rem 0.1875rem $secundary);
-	@include responsive(41.75rem) {
-		width: 8.75rem;
-	}
-	@include responsive(26.875rem) {
-		width: 8.4375rem;
-	}
+.beginner {
+	width: 35%;
 }
 
 // /* .parrafo_lenguajes{
@@ -493,7 +531,7 @@ a {
 
 .formulario {
 	grid-area: contacto;
-	max-width: 100rem;
+	max-width: $max-width;
 	width: 90%;
 	margin: 0 auto;
 	@include responsive(100rem) {
@@ -509,7 +547,6 @@ a {
 		width: 90%;
 	}
 }
-
 .formulario__titulo {
 	text-align: center;
 }
@@ -576,7 +613,6 @@ a {
 		color: $danger;
 	}
 }
-
 .formulario__validacion-estado {
 	position: absolute;
 	right: 0.625rem;
@@ -595,15 +631,6 @@ a {
 	& p {
 		color: $white !important;
 	}
-}
-
-.fa,
-.fab,
-.fad,
-.fal,
-.far,
-.fas {
-	display: inline-flex;
 }
 
 .formulario__mensaje p {
@@ -702,40 +729,103 @@ a {
 // /*!----------------- Footer -----------------*/
 // /**--------------------------------------------------------------*/
 
-footer p {
-	margin: 0;
-	padding: 0;
-	transition: 0.3s all ease;
-}
-
-.footer {
-	margin-top: 20px;
+footer {
 	width: 100%;
-	// margin-bottom: 30px;
-	grid-area: footer;
-	min-height: 8.125rem;
+	margin-top: 1.25rem;
+	font-size: 0.8125rem;
 	background: $background;
 	transition: 0.3s all ease;
+	display: flex;
+	justify-content: center;
+	align-content: center;
 	@include shadow($bg-title);
-	// box-shadow: 0px 0px 10px ;
 	body.light & {
 		background: $secundary;
 		color: $black;
 		@include shadow($shadow);
 	}
+	& .footer {
+		max-width: $max-width;
+		grid-area: footer;
+		width: 100%;
+		margin: 0 0.625rem;
+	}
+	& .footer__main {
+		@include flex(column, wrap, center, center);
+		border-bottom: 1px solid $bg-title;
+		padding-bottom: 0.9375rem;
+		body.light & {
+			border-bottom: 1px solid $shadow;
+		}
+		& a {
+			margin-top: 1.5625rem;
+			& img {
+				width: 6.25rem;
+			}
+		}
+	}
+	& .footer__enlaces {
+		margin: 0.625rem;
+		overflow: hidden !important;
+	}
+	& .footer__enlaces a {
+		padding: 0.625rem 0.9375rem 0.125rem;
+	}
+	& .footer__enlaces a:hover {
+		// padding-bottom: 0px !important;
+		color: $primary;
+		& > {
+			border-bottom: 1px solid $white !important;
+		}
+		body.light & {
+			border-bottom: 1px solid $background !important;
+		}
+	}
+
+	& .footer__secondary {
+		@include flex(row, no-wrap, space-between, center);
+		margin: 10px 1.875rem;
+		@include responsive() {
+			flex-flow: column wrap;
+			justify-content: center;
+		}
+		& p {
+			font-size: 0.8125rem !important;
+			margin: 5px 0 0;
+			padding: 0.625rem 0;
+		}
+		@include responsive() {
+			margin: 0 0.625rem;
+		}
+		& .footer__icons {
+			display: flex;
+			justify-content: center;
+			margin-right: 1.875rem;
+			@include responsive() {
+				margin-right: 0rem;
+			}
+			& .icono {
+				padding: 5px !important;
+				font-size: 1rem;
+				align-items: center;
+				margin: 0 !important;
+				min-height: auto;
+			}
+		}
+	}
 }
 
-.footer__iconos {
-	display: flex;
-	justify-content: space-around;
-}
+// .footer__iconos {
+// 	display: flex;
+// 	justify-content: space-around;
+// }
 
-.footer__parrafo {
-	display: flex;
-	justify-content: space-between;
-	padding: 0.625rem 1.875rem;
-	flex-wrap: wrap;
-}
+// .footer__parrafo {
+// 	display: flex;
+// 	justify-content: space-between;
+// 	padding: 0.625rem 1.875rem;
+// 	flex-wrap: wrap;
+// }
 
 .icono {
 	font-size: 1.75rem;
@@ -805,6 +895,7 @@ footer p {
 .fal,
 .far,
 .fas {
+	display: inline-flex;
 	line-height: normal !important;
 }
 
@@ -888,49 +979,46 @@ footer p {
 }
 
 // /*!==============================================================*/
-/*!================= Error 404 =================*/
+// *!================= Error 404 =================*/
 // /*!==============================================================*/
 
 .error__container {
-	// flex($direction: column, $corte: wrap, $just, $align)
 	@include flex(row, wrap, space-evenly, center);
 	margin-top: 5.625rem;
-}
-
-.error__img {
-	margin: 0.3125rem 0.625rem;
-	@include responsive() {
-		height: 450px;
+	& .error__img {
+		margin: 0.3125rem 0.625rem;
+		@include responsive() {
+			height: 450px;
+		}
 	}
-}
-
-.error__information {
-	margin: 0.3125rem 0.9375rem 1.25rem;
-	overflow: hidden !important;
-	text-align: center;
-	& .error__title {
-		color: $primary;
-		// color: $white;
-		// body.light & {
-		// }
+	& .error__information {
+		margin: 0.3125rem 0.9375rem 1.25rem;
+		overflow: hidden !important;
+		text-align: center;
+		& .error__title {
+			color: $primary;
+			// color: $white;
+			// body.light & {
+			// }
+		}
 	}
-}
-.error__link {
-	@include btn();
-	padding: 0.625rem 1.25rem;
-	body.light & {
-		color: $primary;
-		border: 0.125rem solid $primary;
+	& .error__link {
+		@include btn();
+		padding: 0.625rem 1.25rem;
+		body.light & {
+			color: $primary;
+			border: 0.125rem solid $primary;
+		}
+		body.light &:hover {
+			color: $white;
+			border: 0.125rem solid $primary;
+		}
+		// min-height: 35px;
 	}
-	body.light &:hover {
-		color: $white;
-		border: 0.125rem solid $primary;
-	}
-	// min-height: 35px;
 }
 
 // /*!==============================================================*/
-/*!================= Margenes =================*/
+// *!================= Margenes =================*/
 // /*!==============================================================*/
 .mx-0 {
 	margin-left: 0;
@@ -954,6 +1042,10 @@ footer p {
 }
 .mb-4 {
 	margin-bottom: 1.25rem;
+}
+
+.text-danger {
+	color: $danger !important;
 }
 
 // @media (prefers-color-scheme: light) {

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import axios from 'axios';
 
 export default function Formulario() {
 	const [submittedForm, setSubmittedForm] = useState(null);
+	const [emailSendSuccessfully, setEmailSendSuccessfully] = useState(null);
 
 	const expresions = {
 		name: /^[a-zA-ZÀ-ÿ\s]{7,60}$/,
@@ -153,13 +155,26 @@ export default function Formulario() {
 						return errors;
 					}}
 					onSubmit={(values, { resetForm }) => {
+						const data = new FormData();
+						data.append('name', values.name);
+						data.append('email', values.email);
+						data.append('motive', values.motive);
+						data.append('message', values.message);
+						axios.post('https://jhoncamargo.000webhostapp.com/controller/correo.php', data).then((resp) => {
+							console.log(resp);
+							if (resp.data.success) {
+								setEmailSendSuccessfully(true);
+							} else {
+								setEmailSendSuccessfully(false);
+							}
+						});
 						resetForm();
 						clearInputs('name');
 						clearInputs('email');
 						clearInputs('motive');
 						clearInputs('message');
 						setSubmittedForm(true);
-						setTimeout(() => setSubmittedForm(null), 5000);
+						setTimeout(() => setSubmittedForm(null), 7000);
 					}}
 				>
 					{({ errors }) => (
@@ -267,10 +282,21 @@ export default function Formulario() {
 								<p className="formulario__mensaje-exito" id="formulario__mensaje-exito">
 									{submittedForm && (
 										<span>
-											<FormattedMessage
-												id="form.message.correct"
-												defaultMessage="\u00a1Form successfully submitted!"
-											/>
+											{emailSendSuccessfully ? (
+												<span>
+													<FormattedMessage
+														id="form.message.correct"
+														defaultMessage="\u00a1Form successfully submitted!"
+													/>
+												</span>
+											) : (
+												<span className="text-danger">
+													<FormattedMessage
+														id="form.message.failed"
+														defaultMessage="A problem has occurred, our site is experiencing errors."
+													/>
+												</span>
+											)}
 										</span>
 									)}
 								</p>

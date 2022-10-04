@@ -25,6 +25,12 @@
 	"error404.buttom": "Volver a la página principal",
 
 	"skills.title": "Habilidades",
+	"skills.language.experience": "Experiencia:",
+	"skills.language.years": "a\u00f1o",
+	"skills.language.expert": "Experto",
+	"skills.language.advanced": "Avanzado",
+	"skills.language.beginner": "Principiante",
+	"skills.language.intermediate": "Intermedio",
 
 	"form.title": "Cont\u00e1ctame",
 	"form.label.name": "Nombre",
@@ -47,8 +53,9 @@
 	"form.input.message.incorrect": "El mensaje debe tener mínimo 10 caracteres, solo puede contener letras, números, puntos, guiones, guion bajo",
 	"form.message.incorrect": "Por favor rellena el formulario correctamente",
 	"form.message.correct": "\u00a1Formulario enviado exitosamente!",
+	"form.message.failed": "Ocurri\u00f3 un probema, nuestro sitio est\u00e1 experimentando fallos",
 
-	"footer.description": "Portafolio ",
+	"footer.description": " | Portafolio ",
 	"footer.description.name": "Jhon Camargo",
 	"footer.technologies": "Esta p\u00e1gina fue desarrollada con React, Sass y PHP",
 	"footer.copyright": "Versi\u00f3n 2.0 | Copyright \u00a9",

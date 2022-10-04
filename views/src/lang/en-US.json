@@ -25,6 +25,12 @@
 	"error404.buttom": "Back to main page",
 
 	"skills.title": "Skills",
+	"skills.language.experience": "Experience:",
+	"skills.language.years": "year",
+	"skills.language.expert": "Expert",
+	"skills.language.advanced": "Advanced",
+	"skills.language.beginner": "Beginner",
+	"skills.language.intermediate": "Intermediate",
 
 	"form.title": "Contact me",
 	"form.label.name": "Name",
@@ -48,8 +54,9 @@
 
 	"form.message.incorrect": "Please fill in the form correctly",
 	"form.message.correct": "\u00a1Form successfully submitted!",
+	"form.message.failed": "A problem has occurred, our site is experiencing errors.",
 
-	"footer.description": "Portfolio ",
+	"footer.description": " | Portfolio ",
 	"footer.description.name": "Jhon Camargo",
 	"footer.technologies": "This page was developed with React, Sass and PHP.",
 	"footer.copyright": "Version 2.0 | Copyright \u00a9",

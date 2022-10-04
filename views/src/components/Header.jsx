@@ -75,6 +75,7 @@ export default function Header() {
 			behavior: 'smooth',
 		});
 	};
+
 	return (
 		<>
 			<div className="container">
