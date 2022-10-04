@@ -53,24 +53,15 @@ export default function Footer() {
 							<img src={logo} loading="lazy" alt="" className="header__logo" />
 						</a>
 						<div className="footer__enlaces">
-							{/* <p>
-								<FormattedMessage id="footer.copyright" defaultMessage="Version 2.0 | Copyright" />
-							</p>
-							<p className="footer__parrafo">
-								<FormattedMessage
-									id="footer.technologies"
-									defaultMessage="This page was developed with React, Sass and PHP."
-								/>
-							</p> */}
 							<Link to="/" onClick={goToSection} className="enlace__footer">
 								<FormattedMessage id="header.contact" defaultMessage="Contact" />
 							</Link>
-							<a href="proyectos.php" className="enlace__footer">
+							<Link to="/incomplete" className="enlace__footer">
 								<FormattedMessage id="footer.projects" defaultMessage="Projects" />
-							</a>
-							<a href="aviso-legal.php" className="enlace__footer">
+							</Link>
+							<Link to="/incomplete" className="enlace__footer">
 								<FormattedMessage id="footer.notice.legal" defaultMessage="Legal notice" />
-							</a>
+							</Link>
 						</div>
 					</div>
 					<div className="footer__secondary">
@@ -79,7 +70,8 @@ export default function Footer() {
 							<FormattedMessage id="footer.description" defaultMessage="Portfolio" />
 							<a href="http://jhoncamargo.000webhostapp.com/" className="enlace__footer">
 								<FormattedMessage id="footer.description.name" defaultMessage=" Jhon Camargo" />
-							</a>
+							</a>{' '}
+							v2.0
 						</p>
 						<div className="footer__icons">
 							<Link

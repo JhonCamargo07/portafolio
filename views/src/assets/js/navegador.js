@@ -1,9 +1,9 @@
-(function () {
+(function() {
 	if (!localStorage.getItem('lang')) {
 		localStorage.setItem('lang', 'en-US');
 	}
-	if (!localStorage.getItem('dark')) {
-		localStorage.setItem('dark', 'dark');
+	if (!localStorage.getItem('theme')) {
+		localStorage.setItem('theme', 'dark');
 	}
 	function navegador() {
 		var agente = navigator.userAgent;

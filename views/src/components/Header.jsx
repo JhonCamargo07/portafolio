@@ -2,7 +2,8 @@ import React, { useContext, useState } from 'react';
 import logo from '../assets/img/logo_jhon_camargo.png';
 import { NavLink } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
-import { langContext } from '../context/context.js';
+import { langContext } from '../context/langContext';
+import { themeContext } from '../context/themeContext';
 import en from './../assets/img/usa.png';
 import es from './../assets/img/spain.png';
 import sun from './../assets/img/sun.svg';
@@ -10,12 +11,12 @@ import moon from './../assets/img/moon.svg';
 
 export default function Header() {
 	const lang = useContext(langContext);
+	const theme = useContext(themeContext);
 
 	const [altImg, setAltImg] = useState(localStorage.getItem('lang') === 'en-US' ? 'Ingl\u00e9s' : 'Spanish');
 	const [titleImg, setTitleImg] = useState(
 		localStorage.getItem('lang') === 'en-US' ? 'Change language to Spanish' : 'Cambiar idioma a ingl\u00e9s'
 	);
-	// const [menuOpen, setMenuOpen] = useState(false);
 
 	const changeImgLang = () => {
 		const btn = document.querySelector('#btn');
@@ -44,11 +45,6 @@ export default function Header() {
 		const enlaces = document.getElementsByClassName('header__nav')[0];
 		enlaces.classList.toggle('header__nav2');
 		enlaces.style.transtion = 'transform 0.5s ease-in-out all';
-		// if (document.querySelector('.header__nav.header__nav2')) {
-		// 	setMenuOpen(true);
-		// } else {
-		// 	setMenuOpen(false);
-		// }
 	};
 
 	const goToSection = (nameSection) => {
@@ -133,7 +129,7 @@ export default function Header() {
 						<button
 							className="switch header__nav--btn"
 							onClick={() => {
-								lang.establishDark();
+								theme.changeTheme();
 							}}
 						>
 							<img src={sun} alt="Light" title="Switch to light mode" />

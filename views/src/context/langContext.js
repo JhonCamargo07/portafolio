@@ -44,26 +44,9 @@ const LangProvider = ({ children }) => {
 		}
 	};
 
-	const establishDark = () => {
-		switch (localStorage.getItem('dark')) {
-			case 'dark':
-				document.body.classList.add('light');
-				localStorage.setItem('dark', 'light');
-				break;
-			case 'light':
-				document.body.classList.remove('light');
-				localStorage.setItem('dark', 'dark');
-				break;
-			default:
-				document.body.classList.remove('light');
-				localStorage.setItem('dark', 'dark');
-		}
-	};
-
 	return (
-		<langContext.Provider value={{ establishLanguage: establishLanguage, establishDark: establishDark }}>
+		<langContext.Provider value={{ establishLanguage: establishLanguage }}>
 			<IntlProvider locale={locale} messages={message}>
-				{establishDark()}
 				{children}
 			</IntlProvider>
 		</langContext.Provider>

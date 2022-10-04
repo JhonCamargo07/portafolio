@@ -8,8 +8,11 @@ export default function Router() {
 		<>
 			<BrowserRouter>
 				<Routes>
-					<Route path="*" element={<Error404 />} />
+					<Route index element={<Home />} />
 					<Route path="/" element={<Home />} />
+					<Route path="*" element={<Error404 />} />
+					<Route path="/error404" element={<Error404 />} />
+					<Route path="/incomplete" element={<Error404 />} />
 				</Routes>
 			</BrowserRouter>
 		</>
