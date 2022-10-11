@@ -50,7 +50,7 @@
 	"form.input.motive.empty": "Please enter the reason why you are contacting me",
 	"form.input.motive.incorrect": "The motif must be between 10 and 100 characters long and can only contain letters, numbers, periods, hyphens and underscores",
 	"form.input.message.empty": "Please enter your message",
-	"form.input.message.incorrect": "The message must be at least 10 characters long, it can only contain letters, numbers, dots, hyphens, underscores, underscores, hyphens, and underscores",
+	"form.input.message.incorrect": "The message must be at least 10 characters long, it can only contain letters, numbers, dots, hyphens and underscores",
 
 	"form.message.incorrect": "Please fill in the form correctly",
 	"form.message.correct": "\u00a1Form successfully submitted!",

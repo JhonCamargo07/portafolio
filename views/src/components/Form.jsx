@@ -10,8 +10,8 @@ export default function Formulario() {
 	const expresions = {
 		name: /^[a-zA-ZÀ-ÿ\s]{7,60}$/,
 		email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-		motive: /^[a-zA-ZÀ-ÿ0-9_.,+-\s/¿?!:@?]{10,100}$/,
-		message: /^[a-zA-ZÀ-ÿ0-9_.,+-\s$%/¿?¡!:@?\uD800-\uDBFF\u2702-\u27B0\uF680-\uF6C0\u24C2-\uF251]{10,100000}$/,
+		motive: /^[a-zA-ZÀ-ÿ0-9_.\',+-\s/¿?!:@?()\uD800-\uDBFF\u2702-\u27B0\uF680-\uF6C0\u24C2-\uF251]{10,100}$/,
+		message: /^[a-zA-ZÀ-ÿ0-9_.\',+-\s$%/¿?¡!:@?()\uD800-\uDBFF\u2702-\u27B0\uF680-\uF6C0\u24C2-\uF251]{10,1300}$/,
 	};
 
 	const inputCorrect = (nameInput) => {
@@ -110,7 +110,7 @@ export default function Formulario() {
 							errors.motive = (
 								<FormattedMessage
 									id="form.input.motive.incorrect"
-									defaultMessage="The motif must be between 10 and 100 characters long and can only contain letters, numbers, periods, hyphens and underscoressss"
+									defaultMessage="The motif must be between 10 and 100 characters long and can only contain letters, numbers, periods, hyphens and underscores"
 								/>
 							);
 							inputIncorrect('motive');
@@ -130,7 +130,7 @@ export default function Formulario() {
 							errors.message = (
 								<FormattedMessage
 									id="form.input.message.incorrect"
-									defaultMessage="The message must be at least 10 characters long, it can only contain letters, numbers, dots, hyphens, underscores, underscores, hyphens, and underscores"
+									defaultMessage="The message must be at least 10 characters long, it can only contain letters, numbers, dots, hyphens and underscores"
 								/>
 							);
 							inputIncorrect('message');
@@ -161,7 +161,6 @@ export default function Formulario() {
 						data.append('motive', values.motive);
 						data.append('message', values.message);
 						axios.post('https://jhoncamargo.000webhostapp.com/controller/correo.php', data).then((resp) => {
-							console.log(resp);
 							if (resp.data.success) {
 								setEmailSendSuccessfully(true);
 							} else {
@@ -180,41 +179,43 @@ export default function Formulario() {
 					{({ errors }) => (
 						// action="" method="POST"
 						<Form className="formulario__form" name="formulario" id="form">
-							{/* <!-- Grupo name --> */}
-							<div className="formulario__grupo" id="grupo__name">
-								<label htmlFor="name" className="formulario__label px-0">
-									<FormattedMessage id="form.label.name" defaultMessage="Name" />
-									<span className="required"> *</span>
-								</label>
-								<div className="formulario__grupo-input">
-									<Field type="text" className="formulario__input" id="name" name="name" />
-									<i className="formulario__validacion-estado fas fa-times-circle"></i>
+							<div id="group__duplicate">
+								{/* <!-- Grupo name --> */}
+								<div className="formulario__grupo" id="grupo__name">
+									<label htmlFor="name" className="formulario__label px-0">
+										<FormattedMessage id="form.label.name" defaultMessage="Name" />
+										<span className="required"> *</span>
+									</label>
+									<div className="formulario__grupo-input">
+										<Field type="text" className="formulario__input" id="name" name="name" />
+										<i className="formulario__validacion-estado fas fa-times-circle"></i>
+									</div>
+									<p className="formulario__input-error">
+										<ErrorMessage name="name" component={() => <span>{errors.name}</span>} />
+									</p>
 								</div>
-								<p className="formulario__input-error">
-									<ErrorMessage name="name" component={() => <span>{errors.name}</span>} />
-								</p>
-							</div>
 
-							{/* <!-- Grupo email --> */}
-							<div className="formulario__grupo" id="grupo__email">
-								<label htmlFor="email" className="formulario__label px-0">
-									<FormattedMessage id="form.label.email" defaultMessage="Email" />
-									<span className="required"> *</span>
-								</label>
-								<div className="formulario__grupo-input">
-									<Field
-										type="text"
-										className="formulario__input"
-										id="email"
-										name="email"
-										// placeholder="correo@correo.com"
-										title="Escribe un correo electronico valida para poder contactarme contigo"
-									/>
-									<i className="formulario__validacion-estado fas fa-times-circle"></i>
+								{/* <!-- Grupo email --> */}
+								<div className="formulario__grupo" id="grupo__email">
+									<label htmlFor="email" className="formulario__label px-0">
+										<FormattedMessage id="form.label.email" defaultMessage="Email" />
+										<span className="required"> *</span>
+									</label>
+									<div className="formulario__grupo-input">
+										<Field
+											type="text"
+											className="formulario__input"
+											id="email"
+											name="email"
+											// placeholder="correo@correo.com"
+											title="Escribe un correo electronico valida para poder contactarme contigo"
+										/>
+										<i className="formulario__validacion-estado fas fa-times-circle"></i>
+									</div>
+									<p className="formulario__input-error">
+										<ErrorMessage name="email" component={() => <span>{errors.email}</span>} />
+									</p>
 								</div>
-								<p className="formulario__input-error">
-									<ErrorMessage name="email" component={() => <span>{errors.email}</span>} />
-								</p>
 							</div>
 
 							{/* <!-- Grupo motive --> */}

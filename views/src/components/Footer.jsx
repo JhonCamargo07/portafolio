@@ -78,23 +78,12 @@ export default function Footer() {
 								to="/"
 								onClick={(event) => {
 									event.preventDefault();
-									window.open('https://www.facebook.com/jhonalex.camargo.902/');
+									window.open('https://github.com/JhonCamargo07');
 								}}
 								className="icono"
-								title="Ir a Facebook"
+								title="Ir a Github"
 							>
-								<i className=" fab fa-facebook-f"></i>
-							</Link>
-							<Link
-								to="/"
-								onClick={(event) => {
-									event.preventDefault();
-									window.open('https://twitter.com/JhonCamargo21');
-								}}
-								className="icono"
-								title="Ir a Twitter"
-							>
-								<i className=" fab fa-twitter"></i>
+								<i className=" fab fa-github"></i>
 							</Link>
 							<Link
 								to="/"
@@ -106,17 +95,6 @@ export default function Footer() {
 								title="Ir a Linkedin"
 							>
 								<i className=" fab fa-linkedin-in"></i>
-							</Link>
-							<Link
-								to="/"
-								onClick={(event) => {
-									event.preventDefault();
-									window.open('https://github.com/JhonCamargo07');
-								}}
-								className="icono"
-								title="Ir a Github"
-							>
-								<i className=" fab fa-github"></i>
 							</Link>
 						</div>
 					</div>
