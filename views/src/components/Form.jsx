@@ -162,10 +162,9 @@ export default function Formulario() {
 						data.append('message', values.message);
 						axios.post('https://jhoncamargo.000webhostapp.com/controller/correo.php', data).then((resp) => {
 							if (resp.data.success) {
-								setEmailSendSuccessfully(true);
-							} else {
-								setEmailSendSuccessfully(false);
+								return setEmailSendSuccessfully(true);
 							}
+							setEmailSendSuccessfully(false);
 						});
 						resetForm();
 						clearInputs('name');
@@ -174,8 +173,7 @@ export default function Formulario() {
 						clearInputs('message');
 						setSubmittedForm(true);
 						setTimeout(() => setSubmittedForm(null), 7000);
-					}}
-				>
+					}}>
 					{({ errors }) => (
 						// action="" method="POST"
 						<Form className="formulario__form" name="formulario" id="form">
@@ -254,8 +252,7 @@ export default function Formulario() {
 										id="message"
 										rows="5"
 										// placeholder=""
-										title="Describe tu mensaje..."
-									></Field>
+										title="Describe tu mensaje..."></Field>
 									<i className="formulario__validacion-estado fas fa-times-circle"></i>
 								</div>
 								<p className="formulario__input-error">

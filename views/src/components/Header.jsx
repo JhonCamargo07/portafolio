@@ -23,17 +23,14 @@ export default function Header() {
 		const language = localStorage.getItem('lang');
 		if (language) {
 			if (language === 'es-CO') {
-				// setImgLang(en);
 				setAltImg('Ingl\u00e9s');
 				setTitleImg('Cambiar idioma a ingl\u00e9s');
 				btn.classList.remove('active');
 			} else if (language === 'en-US') {
-				// setImgLang(es);
 				setAltImg('Spanish');
 				setTitleImg('Change language to Spanish');
 				btn.classList.add('active');
 			} else {
-				// setImgLang(es);
 				setAltImg('Spanish');
 				btn.classList.remove('active');
 				setTitleImg('Change language to Spanish');
@@ -87,8 +84,7 @@ export default function Header() {
 								goToSection('aboutme');
 							}}
 							className="header__enlaces"
-							id="sobre_mi"
-						>
+							id="sobre_mi">
 							<i className="icono__nav fas fa-user"></i>
 							<FormattedMessage id="header.about" defaultMessage="About me" />
 						</NavLink>
@@ -98,8 +94,7 @@ export default function Header() {
 								goToSection('skills');
 							}}
 							className="header__enlaces"
-							id="habilidades"
-						>
+							id="habilidades">
 							<i className="icono__nav fas fa-toolbox"></i>
 							<FormattedMessage id="header.skills" defaultMessage="Skills" />
 						</NavLink>
@@ -109,8 +104,7 @@ export default function Header() {
 								goToSection('form');
 							}}
 							className="header__enlaces"
-							id="contacto"
-						>
+							id="contacto">
 							<i className="icono__nav fas fa-id-badge"></i>
 							<FormattedMessage id="header.contact" defaultMessage="Contact" />
 						</NavLink>
@@ -121,8 +115,7 @@ export default function Header() {
 							onClick={() => {
 								lang.establishLanguage();
 								changeImgLang();
-							}}
-						>
+							}}>
 							<img src={en} alt={altImg} />
 							<img src={es} alt={altImg} />
 						</button>
@@ -130,8 +123,7 @@ export default function Header() {
 							className="switch header__nav--btn"
 							onClick={() => {
 								theme.changeTheme();
-							}}
-						>
+							}}>
 							<img src={sun} alt="Light" title="Switch to light mode" />
 							<img src={moon} alt="Dark" title="Switch to dark mode" />
 						</button>
@@ -142,8 +134,7 @@ export default function Header() {
 							onClick={() => {
 								toggleMenu();
 							}}
-							id="hamburguesa"
-						></i>
+							id="hamburguesa"></i>
 					</div>
 				</header>
 			</div>

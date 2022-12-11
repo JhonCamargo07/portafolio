@@ -26,7 +26,6 @@ export default function Lenguages() {
 				<h1 className="formulario__titulo informacion__titulo">
 					<FormattedMessage id="skills.title" defaultMessage="Skills" />
 				</h1>
-				{/* <!--*=========================== Imagenes de los lenguajes ===========================--> */}
 				<div className="habilidades__content">
 					<div className="habilidades__div">
 						<div className="habilidades__div--img">

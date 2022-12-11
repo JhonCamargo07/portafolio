@@ -4,7 +4,6 @@ import { FormattedMessage } from 'react-intl';
 export default function Professional() {
 	return (
 		<>
-			{/* <!--*=========================== About me professionally ===========================--> */}
 			<h2 className="informacion__subtitulo">
 				<FormattedMessage id="information.about.professional" defaultMessage="Professionally..." />
 			</h2>
