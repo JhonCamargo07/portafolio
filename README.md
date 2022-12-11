@@ -1,8 +1,12 @@
-# Portafolio
+# Jhon Alexander Camargo
 
-[Ir al portafolio](https://jhoncamargo.000webhostapp.com/)
+[Visitar el portafolio](https://jhoncamargo.000webhostapp.com/)
 
-![](views/imagenes/preview/section1.png)
-![](views/imagenes/preview/section2.png)
-![](views/imagenes/preview/section3.png)
-![](views/imagenes/preview/section4.png)
+## Previews
+
+![](img/preview-0-dark.png)
+![](img/preview-1-dark.png)
+![](img/preview-0-white.png)
+![](img/preview-1-white.png)
+
+By: <a href="http://jhoncamargo.000webhostapp.com" target="_blanck">Jhon Camargo</a>

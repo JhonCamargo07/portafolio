@@ -14,10 +14,16 @@ if (isset($_POST)) {
     $message = limpiarTexto($_POST['message']);
 
     if (campoNull($name) || campoNull($email) || campoNull($motive) || campoNull($message)) {
-        $response = array("success" => false, "message" => "Todos los compos en el formulario son requeridos");
+        $response = array("success" => false, "message" => "All fields in the form are required");
         echo (json_encode($response));
         return;
-    } 
+    }
+
+    if (verificarEmail($email)) {
+        $response = array("success" => false, "message" => "Email is invalid");
+        echo (json_encode($response));
+        return;
+    }
 
     $instancia = new Correo();
     $guardarMensaje = $instancia->savedEmail($name, $email, $motive, $message);
@@ -27,6 +33,7 @@ if (isset($_POST)) {
         echo (json_encode($response));
         return;
     } 
+
     $response = array("success" => false, "message" => "A problem has occurred, our site is experiencing errors.");
     echo (json_encode($response));
 }

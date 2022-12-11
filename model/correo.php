@@ -1,6 +1,7 @@
 <?php
 
-class Correo {
+class Correo
+{
     private $pdo;
     private $persona;
     private $asunto;
@@ -32,7 +33,6 @@ class Correo {
         $titulo = $this->asunto;
         $mensajeCompleto = $this->mensaje . "\n\nAtentamente: \n" . $this->persona . "\n" . $this->correoRemitente;
         $header = "From: " . $this->correoRemitente . "\r\n";
-        //$header .= "Reply-to: jhoncamargo07a@gmail.com" . "\r\n";
         $header .= "X-Mailer: PHP/" . phpversion();
         $enviado = @mail($destinario, $titulo, $mensajeCompleto, $header);
         return $enviado;
