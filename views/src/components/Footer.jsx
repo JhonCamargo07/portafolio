@@ -55,8 +55,7 @@ export default function Footer() {
 					</div>
 					<div className="footer__secondary">
 						<p>
-							&#169; {new Date().getFullYear() + ''}{' '}
-							<FormattedMessage id="footer.description" defaultMessage="Portfolio" />
+							&#169; 2022 <FormattedMessage id="footer.description" defaultMessage="Portfolio" />
 							<a href="http://jhoncamargo.000webhostapp.com/" className="enlace__footer">
 								<FormattedMessage id="footer.description.name" defaultMessage=" Jhon Camargo" />
 							</a>{' '}
@@ -70,7 +69,8 @@ export default function Footer() {
 									window.open('https://github.com/JhonCamargo07');
 								}}
 								className="icono"
-								title="Ir a Github">
+								title="Ir a Github"
+							>
 								<i className=" fab fa-github"></i>
 							</Link>
 							<Link
@@ -80,7 +80,8 @@ export default function Footer() {
 									window.open('https://www.linkedin.com/in/jhon-alexander-camargo-cadena-53788a1aa/');
 								}}
 								className="icono"
-								title="Ir a Linkedin">
+								title="Ir a Linkedin"
+							>
 								<i className=" fab fa-linkedin-in"></i>
 							</Link>
 						</div>

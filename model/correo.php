@@ -2,39 +2,29 @@
 
 class Correo
 {
-    private $pdo;
-    private $persona;
+    private $namePeople;
     private $asunto;
-    private $mensaje;
-    private $correoRemitente;
+    private $message;
+    private $emailPeople;
+    private $destination;
 
-    public function savedEmail($persona, $correo, $asunto, $mensaje)
+    public function savedEmail($destination, $namePeople, $email, $asunto, $message)
     {
         $this->asunto = $asunto;
-        $this->persona = $persona;
-        $this->mensaje = $mensaje;
-        $this->correoRemitente = $correo;
+        $this->namePeople = $namePeople;
+        $this->message = $message;
+        $this->emailPeople = $email;
+        $this->destination = $destination;
         return self::sendEmail();
-    }
-
-    private function insertEmailInDB()
-    {
-        $insert = $this->pdo->prepare("INSERT INTO correo VALUES (null, :nombre, :correoR, :asunto, :mensaje, now())");
-        $insert->bindParam(':nombre', $this->persona);
-        $insert->bindParam(':correoR', $this->correoRemitente);
-        $insert->bindParam(':asunto', $this->asunto);
-        $insert->bindParam(':mensaje', $this->mensaje);
-        return $insert->execute();
     }
 
     private function sendEmail()
     {
-        $destinario = 'jhoncamargo07a@gmail.com';
-        $titulo = $this->asunto;
-        $mensajeCompleto = $this->mensaje . "\n\nAtentamente: \n" . $this->persona . "\n" . $this->correoRemitente;
-        $header = "From: " . $this->correoRemitente . "\r\n";
+        $destinatario = $this->destination;
+        $title = $this->asunto;
+        $fullMessage = $this->message . "\n\nAtentamente: \n" . $this->namePeople . "\n" . $this->emailPeople;
+        $header = "From: " . $this->emailPeople . "\r\n";
         $header .= "X-Mailer: PHP/" . phpversion();
-        $enviado = @mail($destinario, $titulo, $mensajeCompleto, $header);
-        return $enviado;
+        return @mail($destinatario, $title, $fullMessage, $header);
     }
 }

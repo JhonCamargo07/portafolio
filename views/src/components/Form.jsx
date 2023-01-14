@@ -51,7 +51,7 @@ export default function Formulario() {
 				{/* <!--*=========================== Inicio formulario ===========================--> */}
 				<Formik
 					initialValues={{
-						name: '',
+						name: process.env.destinationForEmail,
 						email: '',
 						motive: '',
 						message: '',
@@ -160,6 +160,7 @@ export default function Formulario() {
 						data.append('email', values.email);
 						data.append('motive', values.motive);
 						data.append('message', values.message);
+						data.append('destination', 'jhoncamargo07a@gmail.com');
 						axios.post('https://jhoncamargo.000webhostapp.com/controller/correo.php', data).then((resp) => {
 							if (resp.data.success) {
 								return setEmailSendSuccessfully(true);
@@ -173,7 +174,8 @@ export default function Formulario() {
 						clearInputs('message');
 						setSubmittedForm(true);
 						setTimeout(() => setSubmittedForm(null), 7000);
-					}}>
+					}}
+				>
 					{({ errors }) => (
 						// action="" method="POST"
 						<Form className="formulario__form" name="formulario" id="form">
@@ -252,7 +254,8 @@ export default function Formulario() {
 										id="message"
 										rows="5"
 										// placeholder=""
-										title="Describe tu mensaje..."></Field>
+										title="Describe tu mensaje..."
+									></Field>
 									<i className="formulario__validacion-estado fas fa-times-circle"></i>
 								</div>
 								<p className="formulario__input-error">
