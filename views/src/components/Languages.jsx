@@ -20,6 +20,12 @@ import ImgGit from '../assets/img/git.png';
 import ImgGitHub from '../assets/img/github.png';
 
 export default function Lenguages() {
+	const nowDate = new Date().getFullYear();
+
+	const skillsApprovedIn2020 = nowDate - new Date('2020/01/01').getFullYear();
+	const skillsApprovedIn2021 = nowDate - new Date('2021/01/01').getFullYear();
+	const skillsApprovedIn2022 = nowDate - new Date('2022/01/01').getFullYear();
+
 	return (
 		<>
 			<div className="habilidades" id="skills">
@@ -39,8 +45,9 @@ export default function Lenguages() {
 								</div>
 							</div>
 							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" /> 3{' '}
-								<FormattedMessage id="skills.language.years" defaultMessage="years" />s
+								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
+								{skillsApprovedIn2020} <FormattedMessage id="skills.language.years" defaultMessage="years" />
+								{skillsApprovedIn2020 <= 1 ? '' : 's'}
 							</p>
 						</div>
 					</div>
@@ -56,8 +63,9 @@ export default function Lenguages() {
 								</div>
 							</div>
 							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" /> 3{' '}
-								<FormattedMessage id="skills.language.years" defaultMessage="years" />s
+								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
+								{skillsApprovedIn2020} <FormattedMessage id="skills.language.years" defaultMessage="years" />
+								{skillsApprovedIn2020 <= 1 ? '' : 's'}
 							</p>
 						</div>
 					</div>
@@ -73,8 +81,9 @@ export default function Lenguages() {
 								</div>
 							</div>
 							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" /> 2{' '}
-								<FormattedMessage id="skills.language.years" defaultMessage="years" />s
+								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
+								{skillsApprovedIn2021} <FormattedMessage id="skills.language.years" defaultMessage="years" />
+								{skillsApprovedIn2021 <= 1 ? '' : 's'}
 							</p>
 						</div>
 					</div>
@@ -95,8 +104,9 @@ export default function Lenguages() {
 								</div>
 							</div>
 							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" /> 2{' '}
-								<FormattedMessage id="skills.language.years" defaultMessage="years" />s
+								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
+								{skillsApprovedIn2021} <FormattedMessage id="skills.language.years" defaultMessage="years" />
+								{skillsApprovedIn2021 <= 1 ? '' : 's'}
 							</p>
 						</div>
 					</div>
@@ -112,8 +122,9 @@ export default function Lenguages() {
 								</div>
 							</div>
 							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" /> 2{' '}
-								<FormattedMessage id="skills.language.years" defaultMessage="years" />s
+								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
+								{skillsApprovedIn2021} <FormattedMessage id="skills.language.years" defaultMessage="years" />
+								{skillsApprovedIn2021 <= 1 ? '' : 's'}
 							</p>
 						</div>
 					</div>
@@ -129,8 +140,9 @@ export default function Lenguages() {
 								</div>
 							</div>
 							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" /> 1{' '}
-								<FormattedMessage id="skills.language.years" defaultMessage="years" />
+								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
+								{skillsApprovedIn2022} <FormattedMessage id="skills.language.years" defaultMessage="years" />
+								{skillsApprovedIn2022 <= 1 ? '' : 's'}
 							</p>
 						</div>
 					</div>
@@ -146,8 +158,9 @@ export default function Lenguages() {
 								</div>
 							</div>
 							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" /> 3{' '}
-								<FormattedMessage id="skills.language.years" defaultMessage="years" />s
+								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
+								{skillsApprovedIn2020} <FormattedMessage id="skills.language.years" defaultMessage="years" />
+								{skillsApprovedIn2020 <= 1 ? '' : 's'}
 							</p>
 						</div>
 					</div>
@@ -163,8 +176,9 @@ export default function Lenguages() {
 								</div>
 							</div>
 							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" /> 1{' '}
-								<FormattedMessage id="skills.language.years" defaultMessage="years" />
+								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
+								{skillsApprovedIn2022} <FormattedMessage id="skills.language.years" defaultMessage="years" />
+								{skillsApprovedIn2022 <= 1 ? '' : 's'}
 							</p>
 						</div>
 					</div>
@@ -180,8 +194,9 @@ export default function Lenguages() {
 								</div>
 							</div>
 							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" /> 3{' '}
-								<FormattedMessage id="skills.language.years" defaultMessage="years" />s
+								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
+								{skillsApprovedIn2020} <FormattedMessage id="skills.language.years" defaultMessage="years" />
+								{skillsApprovedIn2020 <= 1 ? '' : 's'}
 							</p>
 						</div>
 					</div>
@@ -197,8 +212,9 @@ export default function Lenguages() {
 								</div>
 							</div>
 							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" /> 1{' '}
-								<FormattedMessage id="skills.language.years" defaultMessage="years" />
+								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
+								{skillsApprovedIn2022} <FormattedMessage id="skills.language.years" defaultMessage="years" />
+								{skillsApprovedIn2022 <= 1 ? '' : 's'}
 							</p>
 						</div>
 					</div>
@@ -214,8 +230,9 @@ export default function Lenguages() {
 								</div>
 							</div>
 							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" /> 1{' '}
-								<FormattedMessage id="skills.language.years" defaultMessage="years" />
+								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
+								{skillsApprovedIn2022} <FormattedMessage id="skills.language.years" defaultMessage="years" />
+								{skillsApprovedIn2022 <= 1 ? '' : 's'}
 							</p>
 						</div>
 					</div>
@@ -231,8 +248,9 @@ export default function Lenguages() {
 								</div>
 							</div>
 							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" /> 1{' '}
-								<FormattedMessage id="skills.language.years" defaultMessage="years" />
+								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
+								{skillsApprovedIn2022} <FormattedMessage id="skills.language.years" defaultMessage="years" />
+								{skillsApprovedIn2022 <= 1 ? '' : 's'}
 							</p>
 						</div>
 					</div>
@@ -248,8 +266,9 @@ export default function Lenguages() {
 								</div>
 							</div>
 							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" /> 3{' '}
-								<FormattedMessage id="skills.language.years" defaultMessage="years" />s
+								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
+								{skillsApprovedIn2020} <FormattedMessage id="skills.language.years" defaultMessage="years" />
+								{skillsApprovedIn2020 <= 1 ? '' : 's'}
 							</p>
 						</div>
 					</div>
@@ -265,8 +284,9 @@ export default function Lenguages() {
 								</div>
 							</div>
 							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" /> 1{' '}
-								<FormattedMessage id="skills.language.years" defaultMessage="years" />
+								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
+								{skillsApprovedIn2022} <FormattedMessage id="skills.language.years" defaultMessage="years" />
+								{skillsApprovedIn2022 <= 1 ? '' : 's'}
 							</p>
 						</div>
 					</div>
@@ -282,8 +302,9 @@ export default function Lenguages() {
 								</div>
 							</div>
 							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" /> 1{' '}
-								<FormattedMessage id="skills.language.years" defaultMessage="years" />
+								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
+								{skillsApprovedIn2022} <FormattedMessage id="skills.language.years" defaultMessage="years" />
+								{skillsApprovedIn2022 <= 1 ? '' : 's'}
 							</p>
 						</div>
 					</div>
@@ -299,8 +320,9 @@ export default function Lenguages() {
 								</div>
 							</div>
 							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" /> 1{' '}
-								<FormattedMessage id="skills.language.years" defaultMessage="years" />
+								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
+								{skillsApprovedIn2022} <FormattedMessage id="skills.language.years" defaultMessage="years" />
+								{skillsApprovedIn2022 <= 1 ? '' : 's'}
 							</p>
 						</div>
 					</div>
@@ -316,8 +338,9 @@ export default function Lenguages() {
 								</div>
 							</div>
 							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" /> 2{' '}
-								<FormattedMessage id="skills.language.years" defaultMessage="years" />s
+								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
+								{skillsApprovedIn2021} <FormattedMessage id="skills.language.years" defaultMessage="years" />
+								{skillsApprovedIn2021 <= 1 ? '' : 's'}
 							</p>
 						</div>
 					</div>
@@ -333,8 +356,9 @@ export default function Lenguages() {
 								</div>
 							</div>
 							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" /> 2{' '}
-								<FormattedMessage id="skills.language.years" defaultMessage="years" />s
+								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
+								{skillsApprovedIn2021} <FormattedMessage id="skills.language.years" defaultMessage="years" />
+								{skillsApprovedIn2021 <= 1 ? '' : 's'}
 							</p>
 						</div>
 					</div>

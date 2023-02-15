@@ -51,7 +51,7 @@ export default function Formulario() {
 				{/* <!--*=========================== Inicio formulario ===========================--> */}
 				<Formik
 					initialValues={{
-						name: process.env.destinationForEmail,
+						name: '',
 						email: '',
 						motive: '',
 						message: '',
