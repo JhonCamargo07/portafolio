@@ -26,7 +26,6 @@ $max-width: 1600px;
 	--shadow: rgba(0, 0, 0, 0.5);
 	--hover: #44e144;
 	--bg-titulo: rgba(255, 255, 255, 0.3);
-	/* --color-secundario: #BEC6D5; */
 	--color-secundario: #fefefe;
 	--white: #ffffff;
 	--black: #000000;
@@ -40,7 +39,6 @@ $max-width: 1600px;
 	gap: $gap;
 	@media screen and (max-width: 480px) {
 		grid-template-columns: 1fr;
-		// gap: 0em;
 	}
 }
 
@@ -122,7 +120,6 @@ body {
 	background: $background;
 	font-size: 1.125rem;
 	font-family: $font;
-	// transition: 0.3s all ease-in;
 	animation: fadein 1s;
 	word-wrap: break-word;
 	&.light {
@@ -169,13 +166,11 @@ a {
 }
 
 .contenedor {
-	// @include grid(3, 1.25rem);
 	grid-template-areas:
 		'header        header          header'
 		'imagen         imagen          imagen'
 		'informacion    informacion     informacion'
 		'lenguajes      lenguajes       lenguajes'
-		/* "parrafo"       "parrafo"       "parrafo" */
 		'contacto       contacto        contacto'
 		'footer         footer          footer';
 }
@@ -183,7 +178,6 @@ a {
 // /**--------------------------------------------------------------*/
 // /*!----------------- Header -----------------*/
 // /**--------------------------------------------------------------*/
-
 .header {
 	display: flex;
 	flex-wrap: wrap;
@@ -307,11 +301,10 @@ a {
 // /**--------------------------------------------------------------*/
 // /*!----------------- Parallax -----------------*/
 // /**--------------------------------------------------------------*/
-
 .parallax {
 	grid-area: imagen;
 	position: sticky;
-	height: 46.875rem;
+	height: 100vh;
 	min-height: 250px;
 	overflow: hidden;
 	background: no-repeat center/100% url(../img/parallax.jpg);
@@ -361,7 +354,6 @@ a {
 // /**--------------------------------------------------------------*/
 // /*!----------------- Información -----------------*/
 // /**--------------------------------------------------------------*/
-
 .informacion {
 	grid-area: informacion;
 	margin: 0.625rem auto;
@@ -427,7 +419,6 @@ a {
 // /**--------------------------------------------------------------*/
 // /*!----------------- Lenguajes -----------------*/
 // /**--------------------------------------------------------------*/
-
 .habilidades {
 	width: 100%;
 	margin: auto;
@@ -439,9 +430,7 @@ a {
 	}
 	& .habilidades__content {
 		@include grid(2, 0.625rem);
-		// grid-template-rows: auto;
 		margin: 0.9375rem 0.625rem 0.3125rem;
-		// background: $segundo-bg;
 		border-radius: 0.625rem;
 		@include responsive(56.25rem) {
 			grid-template-columns: repeat(1, 1fr);
@@ -526,7 +515,6 @@ a {
 // /**--------------------------------------------------------------*/
 // /*!----------------- Formulario -----------------*/
 // /**--------------------------------------------------------------*/
-
 .formulario {
 	grid-area: contacto;
 	max-width: $max-width;
@@ -691,7 +679,6 @@ a {
 }
 
 // /**--------------------------- Estilos para a validacion ---------------------------*/
-
 .formulario__grupo-correcto {
 	& .formulario__validacion-estado {
 		color: $success !important;
@@ -716,7 +703,6 @@ a {
 }
 
 // /**--------------------------- Para el textarea ---------------------------*/
-
 .formulario__grupo-correcto {
 	& .formulario__textarea {
 		border: 0.1875rem solid $success !important;
@@ -739,7 +725,6 @@ a {
 // /**--------------------------------------------------------------*/
 // /*!----------------- Footer -----------------*/
 // /**--------------------------------------------------------------*/
-
 footer {
 	width: 100%;
 	margin-top: 1.25rem;
@@ -783,11 +768,9 @@ footer {
 		padding: 0.625rem 0.9375rem 0.125rem;
 	}
 	& .footer__enlaces a:hover {
-		// padding-bottom: 0px !important;
 		color: $primary;
-		& > {
-			border-bottom: 1px solid $white !important;
-		}
+		border-bottom: 1px solid $white !important;
+
 		body.light & {
 			border-bottom: 1px solid $background !important;
 		}
@@ -919,7 +902,6 @@ footer {
 	border-radius: 62.5rem;
 	border: none;
 	position: relative;
-	// padding-left: 0.3125rem;
 	margin-right: 0.3125rem;
 	cursor: pointer;
 	display: flex;
@@ -979,7 +961,6 @@ footer {
 // /*!==============================================================*/
 // *!================= Error 404 =================*/
 // /*!==============================================================*/
-
 .error__container {
 	@include flex(row, wrap, space-evenly, center);
 	margin-top: 5.625rem;
@@ -995,9 +976,6 @@ footer {
 		text-align: center;
 		& .error__title {
 			color: $primary;
-			// color: $white;
-			// body.light & {
-			// }
 		}
 	}
 	& .error__link {
@@ -1011,7 +989,6 @@ footer {
 			color: $white;
 			border: 0.125rem solid $primary;
 		}
-		// min-height: 35px;
 	}
 }
 
@@ -1045,15 +1022,3 @@ footer {
 .text-danger {
 	color: $danger !important;
 }
-
-// @media (prefers-color-scheme: light) {
-// 	body {
-// 		background-color: $secundary;
-// 	}
-// }
-
-// @media (prefers-color-scheme: dark) {
-// 	body {
-// 		background-color: $ba;
-// 	}
-// }

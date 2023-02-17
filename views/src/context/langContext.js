@@ -25,27 +25,27 @@ const LangProvider = ({ children }) => {
 	const [message, setMessage] = useState(messageDefault);
 	const [locale, setLocale] = useState(localeDefault);
 
+	const changeValuesOfLenguages = (messageLanguage, prefixLanguages) => {
+		setMessage(messageLanguage);
+		setLocale(prefixLanguages);
+		localStorage.setItem('lang', prefixLanguages);
+	};
+
 	const establishLanguage = () => {
 		switch (localStorage.getItem('lang')) {
 			case 'es-CO':
-				setMessage(MessageEnglish);
-				setLocale('en-US');
-				localStorage.setItem('lang', 'en-US');
+				changeValuesOfLenguages(MessageEnglish, 'en-US');
 				break;
 			case 'en-US':
-				setMessage(MessageSpanish);
-				setLocale('es-CO');
-				localStorage.setItem('lang', 'es-CO');
+				changeValuesOfLenguages(MessageSpanish, 'es-CO');
 				break;
 			default:
-				setMessage(MessageEnglish);
-				setLocale('en-US');
-				localStorage.setItem('lang', 'en-US');
+				changeValuesOfLenguages(MessageEnglish, 'en-US');
 		}
 	};
 
 	return (
-		<langContext.Provider value={{ establishLanguage: establishLanguage }}>
+		<langContext.Provider value={{ establishLanguage }}>
 			<IntlProvider locale={locale} messages={message}>
 				{children}
 			</IntlProvider>

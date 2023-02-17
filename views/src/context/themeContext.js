@@ -3,19 +3,26 @@ import React from 'react';
 const themeContext = React.createContext();
 
 const ThemeProvider = ({ children }) => {
+	const changeThemeValuesRemovingClass = (nameClass, theme) => {
+		document.body.classList.remove(nameClass);
+		localStorage.setItem('theme', theme);
+	};
+
+	const changeThemeValuesByAddingClass = (nameClass, theme) => {
+		document.body.classList.add(nameClass);
+		localStorage.setItem('theme', theme);
+	};
+
 	const changeTheme = () => {
 		switch (localStorage.getItem('theme')) {
 			case 'dark':
-				document.body.classList.add('light');
-				localStorage.setItem('theme', 'light');
+				changeThemeValuesByAddingClass('light', 'light');
 				break;
 			case 'light':
-				document.body.classList.remove('light');
-				localStorage.setItem('theme', 'dark');
+				changeThemeValuesRemovingClass('light', 'dark');
 				break;
 			default:
-				document.body.classList.remove('light');
-				localStorage.setItem('theme', 'dark');
+				changeThemeValuesRemovingClass('light', 'dark');
 		}
 	};
 
@@ -33,7 +40,7 @@ const ThemeProvider = ({ children }) => {
 	};
 
 	return (
-		<themeContext.Provider value={{ changeTheme: changeTheme }}>
+		<themeContext.Provider value={{ changeTheme }}>
 			{establishTheme()}
 			{children}
 		</themeContext.Provider>
