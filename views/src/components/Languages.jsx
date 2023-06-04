@@ -19,7 +19,7 @@ import ImgMongo from '../assets/img/mongo.png';
 import ImgGit from '../assets/img/git.png';
 import ImgGitHub from '../assets/img/github.png';
 
-export default function Lenguages() {
+export default function LanguageSkills() {
 	const nowDate = new Date().getFullYear();
 
 	const skillsApprovedIn2020 = nowDate - new Date('2020/01/01').getFullYear();

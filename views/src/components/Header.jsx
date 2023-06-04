@@ -13,27 +13,31 @@ export default function Header() {
 	const lang = useContext(langContext);
 	const theme = useContext(themeContext);
 
-	const [altImg, setAltImg] = useState(localStorage.getItem('lang') === 'en-US' ? 'Ingl\u00e9s' : 'Spanish');
+	const [imgLanguage, setImgLanguage] = useState(es);
+	const [altImgLanguage, setAltImgLanguage] = useState(localStorage.getItem('lang') === 'en-US' ? 'Ingl\u00e9s' : 'Spanish');
 	const [titleImg, setTitleImg] = useState(
 		localStorage.getItem('lang') === 'en-US' ? 'Change language to Spanish' : 'Cambiar idioma a ingl\u00e9s'
 	);
 
 	const changeImgLang = () => {
-		const btn = document.querySelector('#btn');
+		const btnLanguage = document.querySelector('#btn');
 		const language = localStorage.getItem('lang');
 		if (language) {
 			if (language === 'es-CO') {
-				setAltImg('Ingl\u00e9s');
+				setAltImgLanguage('Ingl\u00e9s');
 				setTitleImg('Cambiar idioma a ingl\u00e9s');
-				btn.classList.remove('active');
+				setImgLanguage(en);
+				btnLanguage.classList.remove('active');
 			} else if (language === 'en-US') {
-				setAltImg('Spanish');
+				setAltImgLanguage('Spanish');
 				setTitleImg('Change language to Spanish');
-				btn.classList.add('active');
+				setImgLanguage(es);
+				btnLanguage.classList.add('active');
 			} else {
-				setAltImg('Spanish');
-				btn.classList.remove('active');
+				setAltImgLanguage('Spanish');
 				setTitleImg('Change language to Spanish');
+				setImgLanguage(en);
+				btnLanguage.classList.remove('active');
 			}
 		}
 	};
@@ -60,8 +64,6 @@ export default function Header() {
 			case 'form':
 				position = formPosition - headerHeight;
 				break;
-			default:
-				position = 0;
 		}
 		window.scrollTo({
 			top: position - headerHeight,
@@ -84,7 +86,8 @@ export default function Header() {
 								goToSection('aboutme');
 							}}
 							className="header__enlaces"
-							id="sobre_mi">
+							id="sobre_mi"
+						>
 							<i className="icono__nav fas fa-user"></i>
 							<FormattedMessage id="header.about" defaultMessage="About me" />
 						</NavLink>
@@ -94,7 +97,8 @@ export default function Header() {
 								goToSection('skills');
 							}}
 							className="header__enlaces"
-							id="habilidades">
+							id="habilidades"
+						>
 							<i className="icono__nav fas fa-toolbox"></i>
 							<FormattedMessage id="header.skills" defaultMessage="Skills" />
 						</NavLink>
@@ -104,7 +108,8 @@ export default function Header() {
 								goToSection('form');
 							}}
 							className="header__enlaces"
-							id="contacto">
+							id="contacto"
+						>
 							<i className="icono__nav fas fa-id-badge"></i>
 							<FormattedMessage id="header.contact" defaultMessage="Contact" />
 						</NavLink>
@@ -115,15 +120,17 @@ export default function Header() {
 							onClick={() => {
 								lang.establishLanguage();
 								changeImgLang();
-							}}>
-							<img src={en} alt={altImg} />
-							<img src={es} alt={altImg} />
+							}}
+						>
+							<img src={imgLanguage} alt={altImgLanguage} />
+							{/* <img src={es} alt={altImgLanguage} /> */}
 						</button>
 						<button
 							className="switch header__nav--btn"
 							onClick={() => {
 								theme.changeTheme();
-							}}>
+							}}
+						>
 							<img src={sun} alt="Light" title="Switch to light mode" />
 							<img src={moon} alt="Dark" title="Switch to dark mode" />
 						</button>
@@ -134,7 +141,8 @@ export default function Header() {
 							onClick={() => {
 								toggleMenu();
 							}}
-							id="hamburguesa"></i>
+							id="hamburguesa"
+						></i>
 					</div>
 				</header>
 			</div>
