@@ -59,7 +59,7 @@ export default function Footer() {
 							<a href="http://jhoncamargo.000webhostapp.com/" className="enlace__footer">
 								<FormattedMessage id="footer.description.name" defaultMessage=" Jhon Camargo" />
 							</a>{' '}
-							v2.0
+							v3.0
 						</p>
 						<div className="footer__icons">
 							<Link

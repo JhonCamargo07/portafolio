@@ -155,29 +155,28 @@ export default function Formulario() {
 						return errors;
 					}}
 					onSubmit={(values, { resetForm }) => {
-						const data = new FormData();
-						data.append('name', values.name);
-						data.append('email', values.email);
-						data.append('motive', values.motive);
-						data.append('message', values.message);
-						data.append('destination', 'jhoncamargo07a@gmail.com');
-						axios.post('https://jhoncamargo.000webhostapp.com/controller/correo.php', data).then((resp) => {
-							if (resp.data.success) {
-								return setEmailSendSuccessfully(true);
-							}
-							setEmailSendSuccessfully(false);
-						});
+						const data = {
+							name: values.name,
+							email: values.email,
+							motive: values.motive,
+							message: values.message,
+							destination: 'jhoncamargo07a@gmail.com',
+						};
+						axios
+							.post('https://jhoncamargo.000webhostapp.com/controller/correo.php', JSON.stringify(data))
+							.then((resp) => {
+								setEmailSendSuccessfully(resp.data.success);
+							});
 						resetForm();
 						clearInputs('name');
 						clearInputs('email');
 						clearInputs('motive');
 						clearInputs('message');
 						setSubmittedForm(true);
-						setTimeout(() => setSubmittedForm(null), 7000);
+						setTimeout(() => setSubmittedForm(null), 10000);
 					}}
 				>
 					{({ errors }) => (
-						// action="" method="POST"
 						<Form className="formulario__form" name="formulario" id="form">
 							<div id="group__duplicate">
 								{/* <!-- Grupo name --> */}

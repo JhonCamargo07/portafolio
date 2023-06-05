@@ -1,12 +1,15 @@
 <?php
     function limpiarTexto($elemento){
+        if($elemento == null){
+            return null;
+        }
         $input = ltrim(rtrim($elemento));
         $texto = htmlspecialchars($input);
         return ltrim(rtrim($texto));
     }
 
     function campoNull($input){
-        if($input == null){
+        if($input == null || $input == ''){
             return true;
         }else{
             return false;

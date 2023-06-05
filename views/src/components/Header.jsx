@@ -4,16 +4,16 @@ import { NavLink } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 import { langContext } from '../context/langContext';
 import { themeContext } from '../context/themeContext';
-import en from './../assets/img/usa.png';
-import es from './../assets/img/spain.png';
-import sun from './../assets/img/sun.svg';
-import moon from './../assets/img/moon.svg';
+import imgLangEn from './../assets/img/usa.png';
+import imgLangEs from './../assets/img/spain.png';
+import imgSun from './../assets/img/sun.svg';
+import imgMoon from './../assets/img/moon.svg';
 
 export default function Header() {
 	const lang = useContext(langContext);
 	const theme = useContext(themeContext);
 
-	const [imgLanguage, setImgLanguage] = useState(localStorage.getItem('lang') !== 'es-CO' ? es : en);
+	const [imgLanguage, setImgLanguage] = useState(localStorage.getItem('lang') !== 'en-US' ? imgLangEn : imgLangEs);
 	const [altImgLanguage, setAltImgLanguage] = useState(localStorage.getItem('lang') === 'en-US' ? 'Ingl\u00e9s' : 'Spanish');
 	const [titleImg, setTitleImg] = useState(
 		localStorage.getItem('lang') === 'en-US' ? 'Change language to Spanish' : 'Cambiar idioma a ingl\u00e9s'
@@ -26,17 +26,17 @@ export default function Header() {
 			if (language === 'es-CO') {
 				setAltImgLanguage('Ingl\u00e9s');
 				setTitleImg('Cambiar idioma a ingl\u00e9s');
-				setImgLanguage(en);
+				setImgLanguage(imgLangEn);
 				btnLanguage.classList.remove('active');
 			} else if (language === 'en-US') {
 				setAltImgLanguage('Spanish');
 				setTitleImg('Change language to Spanish');
-				setImgLanguage(es);
+				setImgLanguage(imgLangEs);
 				btnLanguage.classList.add('active');
 			} else {
 				setAltImgLanguage('Spanish');
 				setTitleImg('Change language to Spanish');
-				setImgLanguage(es);
+				setImgLanguage(imgLangEs);
 				btnLanguage.classList.remove('active');
 			}
 		}
@@ -75,11 +75,6 @@ export default function Header() {
 
 	return (
 		<>
-			{() => {
-				// lang.establishLanguage();
-				changeImgLang();
-			}}
-
 			<div className="container">
 				<header className="header" id="header">
 					<a href="http://jhoncamargo.000webhostapp.com/" className="header__enlace">
@@ -138,8 +133,8 @@ export default function Header() {
 								theme.changeTheme();
 							}}
 						>
-							<img src={sun} alt="Light" title="Switch to light mode" />
-							<img src={moon} alt="Dark" title="Switch to dark mode" />
+							<img src={imgSun} alt="Light" title="Switch to light mode" />
+							<img src={imgMoon} alt="Dark" title="Switch to dark mode" />
 						</button>
 					</nav>
 					<div className="hamburguesa">

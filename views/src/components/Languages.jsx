@@ -45,7 +45,7 @@ function BeginerProggersBar() {
 	return (
 		<>
 			<div className="habilidades__progress--porcent beginner">
-				<FormattedMessage id="skills.language.beginner" defaultMessage="beginner" />
+				<FormattedMessage id="skills.language.beginner" defaultMessage="Beginner" />
 			</div>
 		</>
 	);
