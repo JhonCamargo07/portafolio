@@ -13,7 +13,7 @@ export default function Header() {
 	const lang = useContext(langContext);
 	const theme = useContext(themeContext);
 
-	const [imgLanguage, setImgLanguage] = useState(es);
+	const [imgLanguage, setImgLanguage] = useState(localStorage.getItem('lang') !== 'es-CO' ? es : en);
 	const [altImgLanguage, setAltImgLanguage] = useState(localStorage.getItem('lang') === 'en-US' ? 'Ingl\u00e9s' : 'Spanish');
 	const [titleImg, setTitleImg] = useState(
 		localStorage.getItem('lang') === 'en-US' ? 'Change language to Spanish' : 'Cambiar idioma a ingl\u00e9s'
@@ -36,7 +36,7 @@ export default function Header() {
 			} else {
 				setAltImgLanguage('Spanish');
 				setTitleImg('Change language to Spanish');
-				setImgLanguage(en);
+				setImgLanguage(es);
 				btnLanguage.classList.remove('active');
 			}
 		}
@@ -53,7 +53,7 @@ export default function Header() {
 		const skillsPosition = document.getElementById('skills').offsetTop;
 		const formPosition = document.getElementById('form').offsetTop;
 		const headerHeight = document.getElementById('header').offsetHeight;
-		let position = 0;
+		let position;
 		switch (nameSection) {
 			case 'aboutme':
 				position = aboutPosition;
@@ -64,6 +64,8 @@ export default function Header() {
 			case 'form':
 				position = formPosition - headerHeight;
 				break;
+			default:
+				position = 0;
 		}
 		window.scrollTo({
 			top: position - headerHeight,
@@ -73,6 +75,11 @@ export default function Header() {
 
 	return (
 		<>
+			{() => {
+				// lang.establishLanguage();
+				changeImgLang();
+			}}
+
 			<div className="container">
 				<header className="header" id="header">
 					<a href="http://jhoncamargo.000webhostapp.com/" className="header__enlace">

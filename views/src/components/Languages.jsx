@@ -8,9 +8,11 @@ import ImgBootStrap from '../assets/img/bootstrap.png';
 import ImgFigma from '../assets/img/figma.png';
 import ImgJS from '../assets/img/javascript.png';
 import ImgReact from '../assets/img/react.png';
+import ImgAngular from '../assets/img/angular.png';
 import ImgPhp from '../assets/img/php.png';
 import ImgLaravel from '../assets/img/laravel.png';
 import ImgJava from '../assets/img/java.png';
+import ImgCShar from '../assets/img/cShar.png';
 import ImgPython from '../assets/img/python.png';
 import ImgMySql from '../assets/img/MySQL.png';
 import ImgSqlServer from '../assets/img/sql-server.png';
@@ -19,12 +21,64 @@ import ImgMongo from '../assets/img/mongo.png';
 import ImgGit from '../assets/img/git.png';
 import ImgGitHub from '../assets/img/github.png';
 
+function AdvanceProggersBar() {
+	return (
+		<>
+			<div className="habilidades__progress--porcent advanced">
+				<FormattedMessage id="skills.language.advanced" defaultMessage="Advanced" />
+			</div>
+		</>
+	);
+}
+
+function IntermediateProggersBar() {
+	return (
+		<>
+			<div className="habilidades__progress--porcent intermediate">
+				<FormattedMessage id="skills.language.intermediate" defaultMessage="Intermediate" />
+			</div>
+		</>
+	);
+}
+
+function BeginerProggersBar() {
+	return (
+		<>
+			<div className="habilidades__progress--porcent beginner">
+				<FormattedMessage id="skills.language.beginner" defaultMessage="beginner" />
+			</div>
+		</>
+	);
+}
+
+function TemplateLanguage(props) {
+	return (
+		<>
+			<div className="habilidades__div">
+				<div className="habilidades__div--img">
+					<img className="habilidades__img" loading="lazy" title={props.altImg} src={props.img} alt={props.altImg} />
+				</div>
+				<div className="habilidades__div--text">
+					<p>{props.title}</p>
+					<div className="habilidades__progress">{props.experience}</div>
+					<p>
+						<FormattedMessage id="skills.language.experience" defaultMessage="Experience" /> {props.year}{' '}
+						<FormattedMessage id="skills.language.years" defaultMessage="years" />
+						{props.year <= 1 ? '' : 's'}
+					</p>
+				</div>
+			</div>
+		</>
+	);
+}
+
 export default function LanguageSkills() {
 	const nowDate = new Date().getFullYear();
 
 	const skillsApprovedIn2020 = nowDate - new Date('2020/01/01').getFullYear();
 	const skillsApprovedIn2021 = nowDate - new Date('2021/01/01').getFullYear();
 	const skillsApprovedIn2022 = nowDate - new Date('2022/01/01').getFullYear();
+	const skillsApprovedIn2023 = nowDate - new Date('2022/01/01').getFullYear();
 
 	return (
 		<>
@@ -33,335 +87,146 @@ export default function LanguageSkills() {
 					<FormattedMessage id="skills.title" defaultMessage="Skills" />
 				</h1>
 				<div className="habilidades__content">
-					<div className="habilidades__div">
-						<div className="habilidades__div--img">
-							<img className="habilidades__img" loading="lazy" src={ImgHtml} alt="Lenguaje html" />
-						</div>
-						<div className="habilidades__div--text">
-							<p>HTML</p>
-							<div className="habilidades__progress">
-								<div className="habilidades__progress--porcent advanced">
-									<FormattedMessage id="skills.language.advanced" defaultMessage="Advanced" />
-								</div>
-							</div>
-							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
-								{skillsApprovedIn2020} <FormattedMessage id="skills.language.years" defaultMessage="years" />
-								{skillsApprovedIn2020 <= 1 ? '' : 's'}
-							</p>
-						</div>
-					</div>
-					<div className="habilidades__div">
-						<div className="habilidades__div--img">
-							<img className="habilidades__img" loading="lazy" src={ImgCss} alt="Lenguaje css" />
-						</div>
-						<div className="habilidades__div--text">
-							<p>CSS</p>
-							<div className="habilidades__progress">
-								<div className="habilidades__progress--porcent advanced">
-									<FormattedMessage id="skills.language.advanced" defaultMessage="Advanced" />
-								</div>
-							</div>
-							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
-								{skillsApprovedIn2020} <FormattedMessage id="skills.language.years" defaultMessage="years" />
-								{skillsApprovedIn2020 <= 1 ? '' : 's'}
-							</p>
-						</div>
-					</div>
-					<div className="habilidades__div">
-						<div className="habilidades__div--img">
-							<img className="habilidades__img" loading="lazy" src={ImgMD} alt="Markdown" />
-						</div>
-						<div className="habilidades__div--text">
-							<p>MARKDOWN</p>
-							<div className="habilidades__progress">
-								<div className="habilidades__progress--porcent advanced">
-									<FormattedMessage id="skills.language.advanced" defaultMessage="Advanced" />
-								</div>
-							</div>
-							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
-								{skillsApprovedIn2021} <FormattedMessage id="skills.language.years" defaultMessage="years" />
-								{skillsApprovedIn2021 <= 1 ? '' : 's'}
-							</p>
-						</div>
-					</div>
-					<div className="habilidades__div">
-						<div className="habilidades__div--img">
-							<img
-								className="habilidades__img"
-								loading="lazy"
-								src={ImgSass}
-								alt="Lenguajes de hoja de estilos, complemento de css"
-							/>
-						</div>
-						<div className="habilidades__div--text">
-							<p>SASS</p>
-							<div className="habilidades__progress">
-								<div className="habilidades__progress--porcent intermediate">
-									<FormattedMessage id="skills.language.intermediate" defaultMessage="Intermediate" />
-								</div>
-							</div>
-							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
-								{skillsApprovedIn2021} <FormattedMessage id="skills.language.years" defaultMessage="years" />
-								{skillsApprovedIn2021 <= 1 ? '' : 's'}
-							</p>
-						</div>
-					</div>
-					<div className="habilidades__div">
-						<div className="habilidades__div--img">
-							<img className="habilidades__img" loading="lazy" src={ImgBootStrap} alt="Framework para css" />
-						</div>
-						<div className="habilidades__div--text">
-							<p>BOOTSTRAP</p>
-							<div className="habilidades__progress">
-								<div className="habilidades__progress--porcent intermediate">
-									<FormattedMessage id="skills.language.intermediate" defaultMessage="Intermediate" />
-								</div>
-							</div>
-							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
-								{skillsApprovedIn2021} <FormattedMessage id="skills.language.years" defaultMessage="years" />
-								{skillsApprovedIn2021 <= 1 ? '' : 's'}
-							</p>
-						</div>
-					</div>
-					<div className="habilidades__div">
-						<div className="habilidades__div--img">
-							<img className="habilidades__img" loading="lazy" src={ImgFigma} alt="Framework para css" />
-						</div>
-						<div className="habilidades__div--text">
-							<p>FIGMA</p>
-							<div className="habilidades__progress">
-								<div className="habilidades__progress--porcent intermediate">
-									<FormattedMessage id="skills.language.intermediate" defaultMessage="Intermediate" />
-								</div>
-							</div>
-							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
-								{skillsApprovedIn2022} <FormattedMessage id="skills.language.years" defaultMessage="years" />
-								{skillsApprovedIn2022 <= 1 ? '' : 's'}
-							</p>
-						</div>
-					</div>
-					<div className="habilidades__div">
-						<div className="habilidades__div--img">
-							<img className="habilidades__img" loading="lazy" src={ImgJS} alt="Lenguaje javascript" />
-						</div>
-						<div className="habilidades__div--text">
-							<p>JAVASCRIPT</p>
-							<div className="habilidades__progress">
-								<div className="habilidades__progress--porcent intermediate">
-									<FormattedMessage id="skills.language.intermediate" defaultMessage="Intermediate" />
-								</div>
-							</div>
-							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
-								{skillsApprovedIn2020} <FormattedMessage id="skills.language.years" defaultMessage="years" />
-								{skillsApprovedIn2020 <= 1 ? '' : 's'}
-							</p>
-						</div>
-					</div>
-					<div className="habilidades__div">
-						<div className="habilidades__div--img">
-							<img className="habilidades__img" loading="lazy" src={ImgReact} alt="Framework de JavaScript" />
-						</div>
-						<div className="habilidades__div--text">
-							<p>REACT</p>
-							<div className="habilidades__progress">
-								<div className="habilidades__progress--porcent beginner">
-									<FormattedMessage id="skills.language.beginner" defaultMessage="Beginner" />
-								</div>
-							</div>
-							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
-								{skillsApprovedIn2022} <FormattedMessage id="skills.language.years" defaultMessage="years" />
-								{skillsApprovedIn2022 <= 1 ? '' : 's'}
-							</p>
-						</div>
-					</div>
-					<div className="habilidades__div">
-						<div className="habilidades__div--img">
-							<img className="habilidades__img" loading="lazy" src={ImgPhp} alt="Lenguaje php" />
-						</div>
-						<div className="habilidades__div--text">
-							<p>PHP</p>
-							<div className="habilidades__progress">
-								<div className="habilidades__progress--porcent advanced">
-									<FormattedMessage id="skills.language.advanced" defaultMessage="Advanced" />
-								</div>
-							</div>
-							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
-								{skillsApprovedIn2020} <FormattedMessage id="skills.language.years" defaultMessage="years" />
-								{skillsApprovedIn2020 <= 1 ? '' : 's'}
-							</p>
-						</div>
-					</div>
-					<div className="habilidades__div">
-						<div className="habilidades__div--img">
-							<img className="habilidades__img" loading="lazy" src={ImgLaravel} alt="Lenguaje java" />
-						</div>
-						<div className="habilidades__div--text">
-							<p>LARAVEL</p>
-							<div className="habilidades__progress">
-								<div className="habilidades__progress--porcent beginner">
-									<FormattedMessage id="skills.language.beginner" defaultMessage="beginner" />
-								</div>
-							</div>
-							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
-								{skillsApprovedIn2022} <FormattedMessage id="skills.language.years" defaultMessage="years" />
-								{skillsApprovedIn2022 <= 1 ? '' : 's'}
-							</p>
-						</div>
-					</div>
-					<div className="habilidades__div">
-						<div className="habilidades__div--img">
-							<img className="habilidades__img" loading="lazy" src={ImgJava} alt="Lenguaje java" />
-						</div>
-						<div className="habilidades__div--text">
-							<p>JAVA</p>
-							<div className="habilidades__progress">
-								<div className="habilidades__progress--porcent intermediate">
-									<FormattedMessage id="skills.language.intermediate" defaultMessage="Intermediate" />
-								</div>
-							</div>
-							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
-								{skillsApprovedIn2022} <FormattedMessage id="skills.language.years" defaultMessage="years" />
-								{skillsApprovedIn2022 <= 1 ? '' : 's'}
-							</p>
-						</div>
-					</div>
-					<div className="habilidades__div">
-						<div className="habilidades__div--img">
-							<img className="habilidades__img" loading="lazy" src={ImgPython} alt="Lenguaje Python" />
-						</div>
-						<div className="habilidades__div--text">
-							<p>PYTHON</p>
-							<div className="habilidades__progress">
-								<div className="habilidades__progress--porcent beginner">
-									<FormattedMessage id="skills.language.beginner" defaultMessage="beginner" />
-								</div>
-							</div>
-							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
-								{skillsApprovedIn2022} <FormattedMessage id="skills.language.years" defaultMessage="years" />
-								{skillsApprovedIn2022 <= 1 ? '' : 's'}
-							</p>
-						</div>
-					</div>
-					<div className="habilidades__div">
-						<div className="habilidades__div--img">
-							<img className="habilidades__img" loading="lazy" src={ImgMySql} alt="Lenguaje MySQL" />
-						</div>
-						<div className="habilidades__div--text">
-							<p>MYSQL</p>
-							<div className="habilidades__progress">
-								<div className="habilidades__progress--porcent advanced">
-									<FormattedMessage id="skills.language.advanced" defaultMessage="Advanced" />
-								</div>
-							</div>
-							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
-								{skillsApprovedIn2020} <FormattedMessage id="skills.language.years" defaultMessage="years" />
-								{skillsApprovedIn2020 <= 1 ? '' : 's'}
-							</p>
-						</div>
-					</div>
-					<div className="habilidades__div">
-						<div className="habilidades__div--img">
-							<img className="habilidades__img" loading="lazy" src={ImgSqlServer} alt="Lenguaje Sql-Server" />
-						</div>
-						<div className="habilidades__div--text">
-							<p>SQL SERVER</p>
-							<div className="habilidades__progress">
-								<div className="habilidades__progress--porcent intermediate">
-									<FormattedMessage id="skills.language.intermediate" defaultMessage="Intermediate" />
-								</div>
-							</div>
-							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
-								{skillsApprovedIn2022} <FormattedMessage id="skills.language.years" defaultMessage="years" />
-								{skillsApprovedIn2022 <= 1 ? '' : 's'}
-							</p>
-						</div>
-					</div>
-					<div className="habilidades__div">
-						<div className="habilidades__div--img">
-							<img className="habilidades__img" loading="lazy" src={ImgPostgreSql} alt="Lenguaje postgresql" />
-						</div>
-						<div className="habilidades__div--text">
-							<p>POSTGRESQL</p>
-							<div className="habilidades__progress">
-								<div className="habilidades__progress--porcent beginner">
-									<FormattedMessage id="skills.language.beginner" defaultMessage="beginner" />
-								</div>
-							</div>
-							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
-								{skillsApprovedIn2022} <FormattedMessage id="skills.language.years" defaultMessage="years" />
-								{skillsApprovedIn2022 <= 1 ? '' : 's'}
-							</p>
-						</div>
-					</div>
-					<div className="habilidades__div">
-						<div className="habilidades__div--img">
-							<img className="habilidades__img" loading="lazy" src={ImgMongo} alt="Lenguaje MongoDB" />
-						</div>
-						<div className="habilidades__div--text">
-							<p>MONGO DB</p>
-							<div className="habilidades__progress">
-								<div className="habilidades__progress--porcent beginner">
-									<FormattedMessage id="skills.language.beginner" defaultMessage="Beginner" />
-								</div>
-							</div>
-							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
-								{skillsApprovedIn2022} <FormattedMessage id="skills.language.years" defaultMessage="years" />
-								{skillsApprovedIn2022 <= 1 ? '' : 's'}
-							</p>
-						</div>
-					</div>
-					<div className="habilidades__div">
-						<div className="habilidades__div--img">
-							<img className="habilidades__img" loading="lazy" src={ImgGit} alt="Software de versionamiento" />
-						</div>
-						<div className="habilidades__div--text">
-							<p>GIT</p>
-							<div className="habilidades__progress">
-								<div className="habilidades__progress--porcent advanced">
-									<FormattedMessage id="skills.language.advanced" defaultMessage="Advanced" />
-								</div>
-							</div>
-							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
-								{skillsApprovedIn2021} <FormattedMessage id="skills.language.years" defaultMessage="years" />
-								{skillsApprovedIn2021 <= 1 ? '' : 's'}
-							</p>
-						</div>
-					</div>
-					<div className="habilidades__div">
-						<div className="habilidades__div--img">
-							<img className="habilidades__img" loading="lazy" src={ImgGitHub} alt="Controlador de versiones" />
-						</div>
-						<div className="habilidades__div--text">
-							<p>GITHUB</p>
-							<div className="habilidades__progress">
-								<div className="habilidades__progress--porcent advanced">
-									<FormattedMessage id="skills.language.advanced" defaultMessage="Advanced" />
-								</div>
-							</div>
-							<p>
-								<FormattedMessage id="skills.language.experience" defaultMessage="Experience" />{' '}
-								{skillsApprovedIn2021} <FormattedMessage id="skills.language.years" defaultMessage="years" />
-								{skillsApprovedIn2021 <= 1 ? '' : 's'}
-							</p>
-						</div>
-					</div>
+					<TemplateLanguage
+						title="HTML"
+						img={ImgHtml}
+						altImg="Lenguaje html"
+						year={skillsApprovedIn2020}
+						experience={AdvanceProggersBar()}
+					/>
+					<TemplateLanguage
+						title="CSS"
+						img={ImgCss}
+						altImg="Lenguaje css"
+						year={skillsApprovedIn2020}
+						experience={AdvanceProggersBar()}
+					/>
+					<TemplateLanguage
+						title="MARKDOWN"
+						img={ImgMD}
+						altImg="Markdown"
+						year={skillsApprovedIn2021}
+						experience={IntermediateProggersBar()}
+					/>
+					<TemplateLanguage
+						title="SASS"
+						img={ImgSass}
+						altImg="Lenguajes de hoja de estilos, complemento de css"
+						year={skillsApprovedIn2021}
+						experience={IntermediateProggersBar()}
+					/>
+					<TemplateLanguage
+						title="BOOTSTRAP"
+						img={ImgBootStrap}
+						altImg="Framework para css"
+						year={skillsApprovedIn2021}
+						experience={IntermediateProggersBar()}
+					/>
+					<TemplateLanguage
+						title="FIGMA"
+						img={ImgFigma}
+						altImg="Plataforma para realizar prototipos"
+						year={skillsApprovedIn2021}
+						experience={IntermediateProggersBar()}
+					/>
+					<TemplateLanguage
+						title="JAVASCRIPT"
+						img={ImgJS}
+						altImg="Lenguaje javascript"
+						year={skillsApprovedIn2020}
+						experience={IntermediateProggersBar()}
+					/>
+					<TemplateLanguage
+						title="REACT"
+						img={ImgReact}
+						altImg="Framework de JavaScript"
+						year={skillsApprovedIn2022}
+						experience={IntermediateProggersBar()}
+					/>
+					<TemplateLanguage
+						title="ANGULAR"
+						img={ImgAngular}
+						altImg="Framework de JavaScript"
+						year={skillsApprovedIn2023}
+						experience={BeginerProggersBar()}
+					/>
+					<TemplateLanguage
+						title="PHP"
+						img={ImgPhp}
+						altImg="Lenguaje php"
+						year={skillsApprovedIn2020}
+						experience={AdvanceProggersBar()}
+					/>
+					<TemplateLanguage
+						title="LARAVEL"
+						img={ImgLaravel}
+						altImg="Framework de PHP"
+						year={skillsApprovedIn2022}
+						experience={BeginerProggersBar()}
+					/>
+					<TemplateLanguage
+						title="JAVA"
+						img={ImgJava}
+						altImg="Lenguaje Java"
+						year={skillsApprovedIn2022}
+						experience={IntermediateProggersBar()}
+					/>
+					<TemplateLanguage
+						title="C#"
+						img={ImgCShar}
+						altImg="Lenguaje C#"
+						year={skillsApprovedIn2022}
+						experience={BeginerProggersBar()}
+					/>
+					<TemplateLanguage
+						title="PYTHON"
+						img={ImgPython}
+						altImg="Lenguaje Python"
+						year={skillsApprovedIn2022}
+						experience={BeginerProggersBar()}
+					/>
+					<TemplateLanguage
+						title="MYSQL"
+						img={ImgMySql}
+						altImg="Lenguaje MySQL"
+						year={skillsApprovedIn2020}
+						experience={AdvanceProggersBar()}
+					/>
+					<TemplateLanguage
+						title="SQL SERVER"
+						img={ImgSqlServer}
+						altImg="Lenguaje Sql-Server"
+						year={skillsApprovedIn2022}
+						experience={IntermediateProggersBar()}
+					/>
+					<TemplateLanguage
+						title="POSTGRESQL"
+						img={ImgPostgreSql}
+						altImg="Lenguaje postgresql"
+						year={skillsApprovedIn2022}
+						experience={IntermediateProggersBar()}
+					/>
+					<TemplateLanguage
+						title="MONGO DB"
+						img={ImgMongo}
+						altImg="Lenguaje MongoDB"
+						year={skillsApprovedIn2022}
+						experience={IntermediateProggersBar()}
+					/>
+					<TemplateLanguage
+						title="GIT"
+						img={ImgGit}
+						altImg="Software de versionamiento"
+						year={skillsApprovedIn2021}
+						experience={AdvanceProggersBar()}
+					/>
+					<TemplateLanguage
+						title="GITHUB"
+						img={ImgGitHub}
+						altImg="Controlador de versiones"
+						year={skillsApprovedIn2021}
+						experience={AdvanceProggersBar()}
+					/>
 				</div>
 			</div>
 		</>
