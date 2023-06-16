@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import logo from '../assets/img/logo_jhon_camargo.png';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 import { langContext } from '../context/langContext';
 import { themeContext } from '../context/themeContext';
@@ -64,6 +64,10 @@ export default function Header() {
 			case 'form':
 				position = formPosition - headerHeight;
 				break;
+			// case 'projects':
+			// 	position = 0;
+			// 	location.href = '/projects';
+			// 	break;
 			default:
 				position = 0;
 		}
@@ -101,9 +105,14 @@ export default function Header() {
 							className="header__enlaces"
 							id="habilidades"
 						>
-							<i className="icono__nav fas fa-toolbox"></i>
+							<i className="icono__nav fas fa-tools"></i>
 							<FormattedMessage id="header.skills" defaultMessage="Skills" />
 						</NavLink>
+
+						<Link to="/projects" className="header__enlaces" id="habilidades">
+							<i className="icono__nav fas fa-toolbox"></i>
+							<FormattedMessage id="header.projects" defaultMessage="Projects" />
+						</Link>
 						<NavLink
 							to="/"
 							onClick={() => {

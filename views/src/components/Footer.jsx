@@ -20,9 +20,9 @@ export default function Footer() {
 		});
 	};
 
-	document.oncontextmenu = () => {
-		return false;
-	};
+	// document.oncontextmenu = () => {
+	// 	return false;
+	// };
 
 	const goToSection = () => {
 		const position = document.getElementById('form').offsetTop;
