@@ -49,6 +49,10 @@ export default function Header() {
 	};
 
 	const goToSection = (nameSection) => {
+		if (!document.getElementById('information') || !document.getElementById('skills') || !document.getElementById('form')) {
+			return;
+		}
+
 		const aboutPosition = document.getElementById('information').offsetTop;
 		const skillsPosition = document.getElementById('skills').offsetTop;
 		const formPosition = document.getElementById('form').offsetTop;
@@ -64,10 +68,6 @@ export default function Header() {
 			case 'form':
 				position = formPosition - headerHeight;
 				break;
-			// case 'projects':
-			// 	position = 0;
-			// 	location.href = '/projects';
-			// 	break;
 			default:
 				position = 0;
 		}
@@ -97,6 +97,7 @@ export default function Header() {
 							<i className="icono__nav fas fa-user"></i>
 							<FormattedMessage id="header.about" defaultMessage="About me" />
 						</NavLink>
+
 						<NavLink
 							to="/"
 							onClick={() => {
@@ -109,10 +110,6 @@ export default function Header() {
 							<FormattedMessage id="header.skills" defaultMessage="Skills" />
 						</NavLink>
 
-						<Link to="/projects" className="header__enlaces" id="habilidades">
-							<i className="icono__nav fas fa-toolbox"></i>
-							<FormattedMessage id="header.projects" defaultMessage="Projects" />
-						</Link>
 						<NavLink
 							to="/"
 							onClick={() => {
@@ -124,6 +121,12 @@ export default function Header() {
 							<i className="icono__nav fas fa-id-badge"></i>
 							<FormattedMessage id="header.contact" defaultMessage="Contact" />
 						</NavLink>
+
+						<Link to="/projects" className="header__enlaces" id="habilidades">
+							<i className="icono__nav fas fa-toolbox"></i>
+							<FormattedMessage id="header.projects" defaultMessage="Projects" />
+						</Link>
+
 						<button
 							className="lang mx-2 header__nav--btn"
 							id="btn"
@@ -134,8 +137,8 @@ export default function Header() {
 							}}
 						>
 							<img src={imgLanguage} alt={altImgLanguage} />
-							{/* <img src={es} alt={altImgLanguage} /> */}
 						</button>
+
 						<button
 							className="switch header__nav--btn"
 							onClick={() => {

@@ -45,10 +45,10 @@ export default function Footer() {
 							<Link to="/" onClick={goToSection} className="enlace__footer">
 								<FormattedMessage id="header.contact" defaultMessage="Contact" />
 							</Link>
-							<Link to="/incomplete" className="enlace__footer">
+							<Link to="/projects" className="enlace__footer">
 								<FormattedMessage id="footer.projects" defaultMessage="Projects" />
 							</Link>
-							<Link to="/incomplete" className="enlace__footer">
+							<Link to="/legal-notice" className="enlace__footer">
 								<FormattedMessage id="footer.notice.legal" defaultMessage="Legal notice" />
 							</Link>
 						</div>

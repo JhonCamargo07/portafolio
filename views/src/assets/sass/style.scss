@@ -1,37 +1,23 @@
 $background: #0d1117;
 $segundo-bg: #181719;
-$white: #fff;
+$white: #eaecef;
 $black: #000;
 $success: #00d200;
 $primary: #2a72c0;
 $hover: #44e144;
 $info: #2a72c0;
 $danger: #f66060;
-$secundary: #fff;
+$secundary: #fefefe;
 $orange: #ffa500;
 $shadow: rgba(0, 0, 0, 0.5);
 $bg-title: rgba(255, 255, 255, 0.3);
-$gray: #e9ecef;
-$bg-gray: #f7f7f8;
+$gray: #eaecef;
+$bg-gray: #f5f5f5;
 $bg-blue: #0a121d;
 $blue: #0e244c;
 
 $font: 'Montserrat', sans-serif;
 $max-width: 1600px;
-
-:root {
-	--fuente: 'Montserrat', sans-serif;
-	--background: #0d1117;
-	--color: #00d200;
-	--shadow: rgba(0, 0, 0, 0.5);
-	--hover: #44e144;
-	--bg-titulo: rgba(255, 255, 255, 0.3);
-	--color-secundario: #fefefe;
-	--white: #ffffff;
-	--black: #000000;
-	--icono: #2a72c0;
-	--error: #f66060;
-}
 
 @mixin grid($cols, $gap) {
 	display: grid;
@@ -556,7 +542,7 @@ a {
 
 .formulario__input {
 	width: 100%;
-	background: $white;
+	background-color: $white;
 	border: 0.1875rem solid transparent;
 	border-radius: 0.1875rem;
 	height: 2.8125rem;
@@ -579,6 +565,7 @@ a {
 	resize: none;
 	padding: 0.625rem;
 	border-radius: 0.3125rem;
+	background-color: $white;
 	border: 0.1875rem solid transparent;
 	body.light & {
 		border: 0.1875rem solid $shadow;
@@ -954,7 +941,6 @@ footer {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	display: block !important;
 	z-index: 99999;
 }
 

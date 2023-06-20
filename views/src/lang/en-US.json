@@ -25,6 +25,11 @@
 	"error404.p2": "It is possible that what you are looking for no longer exists or the link is misspelled.",
 	"error404.buttom": "Back to main page",
 
+	"error403.title": "Sorry, access denied",
+	"error403.p1": "Pero no se preocupe, \u00a1Es solo un error 403!",
+	"error403.p2": "It is possible that the link is misspelled or that you do not have privileges to access this content.",
+	"error403.buttom": "Back to main page",
+
 	"skills.title": "Skills",
 	"skills.language.experience": "Experience:",
 	"skills.language.years": "year",
@@ -62,5 +67,32 @@
 	"footer.technologies": "This page was developed with React, Sass and PHP.",
 	"footer.copyright": "Version 2.0 | Copyright \u00a9",
 	"footer.notice.legal": "Legal Notice",
-	"footer.projects": "Projects"
+	"footer.projects": "Projects",
+
+	"notice.legal.title": "Aviso legal",
+	"notice.legal.p1": "Es esta p\u00e1gina encontrar\u00e1s toda la informaci\u00f3n sobre el aviso legal, el tratamiento de los datos y la pol\u00edtica de cookies",
+
+	"notice.legal.conditions.title": "1. Aviso legal y condiciones de uso de esta web",
+	"notice.legal.conditions.p1": "La utilizaci\u00f3n de esta p\u00e1gina est\u00e1 sujeta a las siguientes condiciones de uso que pedimos lea atentamente.",
+	"notice.legal.conditions.object.title": "Objeto",
+	"notice.legal.conditions.object.p1": "El responsable del sitio web (en adelante, Jhon Camargo) pone a disposici\u00f3n de los usuarios el presente documento con el fin de cumplir con las obligaciones establecidas en la Ley 34/2002, de Servicios de la Sociedad de la Informaci\u00f3n y del Comercio Electr\u00f3nico (LSSICE). Adem\u00e1s, se pretende informar a todos los usuarios del sitio web sobre las condiciones de uso del mismo.",
+	"notice.legal.conditions.object.p2": "Al ingresar a este sitio web, toda persona asuma el papel de USUARIO y se compromete a cumplir de manera estricta las disposiciones establecidas aqu\u00ed, as\u00ed como cualquier otra ley aplicable.",
+
+	"notice.legal.conditions.responsability.title": "Responsabilidad",
+	"notice.legal.conditions.responsability.p1": "El prestador del sitio web se desliga de cualquier responsabilidad que pudiera derivarse de la informaci\u00f3n publicada en el sitio, en el caso de que dicha informaci\u00f3n haya sido manipulada o introducida por terceros ajenos al prestador.",
+	"notice.legal.conditions.responsability.p2": "Este sitio web puede contener enlaces o enlaces que redirijan a los usuarios a otros sitios y p\u00e1ginas web gestionados por terceros, sobre los cuales Jhon Camargo no tiene control alguno. En estos casos, Jhon Camargo act\u00faa como prestador de servicios de intermediaci\u00f3n de acuerdo con lo establecido en el art\u00edculo 17 de la LSSICE. Jhon Camargo no se responsabiliza ni del contenido ni del estado de dichos sitios y p\u00e1ginas web.",
+	"notice.legal.conditions.responsability.p3": "El prestador no se hace responsable de la informaci\u00f3n y los contenidos almacenados, incluyendo, entre otros, en foros, chats, generadores de blogs, comentarios, redes sociales u otros medios que permitan a terceros publicar contenidos de forma independiente en el sitio web del prestador. Sin embargo, de acuerdo con lo establecido en los art\u00edculos 11 y 16 de la LSSICE, el prestador se pone a disposici\u00f3n de todos los usuarios, autoridades y fuerzas de seguridad, colaborando activamente en la retirada o bloqueo de cualquier contenido que pueda infringir la legislaci\u00f3n nacional o internacional, los derechos de terceros, o la moral y el orden p\u00fablico.",
+
+	"notice.legal.conditions.intellectual.property.title": "Derechos de propiedad industrial e intelectual",
+	"notice.legal.conditions.intellectual.property.p1": "El Usuario reconoce y acepta que todos los derechos de propiedad industrial e intelectual sobre los contenidos y dem\u00e1s elementos insertados en el Sitio Web pertenecen a Jhon Camargo.",
+	"notice.legal.conditions.intellectual.property.p2": "El contenido completo del sitio web, incluyendo, entre otros, su programaci\u00f3n, edici\u00f3n, compilaci\u00f3n y dem\u00e1s elementos necesarios para su funcionamiento, as\u00ed como los dise\u00f1os, logotipos, texto y/o gr\u00e1ficos, im\u00e1genes y material gr\u00e1fico o art\u00edstico presentes en el sitio web, son propiedad del prestador o cuentan con licencia o autorizaci\u00f3n expresa por parte de los autores. Todos los contenidos del sitio web est\u00e1n protegidos por derechos de propiedad industrial e intelectual, registrados en los correspondientes registros p\u00fablicos bajo la titularidad de Jhon Camargo o terceros, y el Usuario no adquiere ning\u00fan derecho de explotaci\u00f3n sobre los mismos, m\u00e1s all\u00e1 de lo estrictamente necesario para el uso adecuado de del sitio web.",
+	"notice.legal.conditions.intellectual.property.p3": "Se permite a cualquier persona natural o jur\u00eddica establecer enlaces en sus p\u00e1ginas o sitios web hacia el sitio web, tanto a su p\u00e1gina principal como a cualquiera de sus p\u00e1ginas. Sin embargo, queda expresamente prohibido enlazar directamente a cualquier p\u00e1gina del sitio web que implique visualizarlas en un marco o frame dentro del navegador.",
+
+	"notice.legal.conditions.data.protection.title": "Protecci\u00f3n de datos",
+	"notice.legal.conditions.data.protection.p1": "De acuerdo con la normativa vigente en protecci\u00f3n de datos y servicios de la sociedad de la informaci\u00f3n, el Usuario acepta que los datos personales proporcionados en el momento de contacto u otros facilitados a Jhon Camargo sean compartidos con el propietario, Jhon Camargo, con el fin de recopilar la informaci\u00f3n necesaria para responder a solicitudes de informaci\u00f3n, contacto, contrataci\u00f3n y/o presupuestos, as\u00ed como para cobros y pagos.",
+	"notice.legal.conditions.data.protection.p2": "Adem\u00e1s, se utilizar\u00e1n para enviar informaci\u00f3n relevante sobre el tema en cuesti\u00f3n (mensajes del usuario) a trav\u00e9s del correo electr\u00f3nico. El usuario otorga su consentimiento expreso para recibir comunicaciones a trav\u00e9s de este medio.",
+	"notice.legal.conditions.data.protection.p3": "El Usuario tiene derecho a revocar el consentimiento otorgado para el env\u00edo de comunicaciones, as\u00ed como a ejercer sus derechos de acceso, rectificaci\u00f3n, cancelaci\u00f3n y oposici\u00f3n. Estos derechos se pueden ejercer mediante una comunicaci\u00f3n escrita a trav\u00e9s del formulario de contacto.",
+
+	"notice.legal.conditions.law.title": "Ley aplicable y de jurisdicci\u00f3n",
+	"notice.legal.conditions.law.p1": "Para resolver cualquier controversia o asunto relacionado con este sitio web o las actividades llevadas a cabo en \u00e9l, se aplicar\u00e1 la legislaci\u00f3n colombiana. Las partes se someten expresamente a dicha legislaci\u00f3n y los Juzgados y Tribunales de Bogot\u00e1 ser\u00e1n competentes para resolver cualquier conflicto derivado o relacionado con el uso del sitio."
 }
