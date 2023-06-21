@@ -1,5 +1,5 @@
 import React from 'react';
-import DivError403 from '../components/DivError403';
+import DivError403 from '../components/errors/DivError403';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
