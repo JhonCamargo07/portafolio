@@ -1,13 +1,44 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import logo from '../assets/img/logo_jhon_camargo.png';
 import { NavLink, Link } from 'react-router-dom';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { langContext } from '../context/langContext';
 import { themeContext } from '../context/themeContext';
 import imgLangEn from './../assets/img/usa.png';
 import imgLangEs from './../assets/img/spain.png';
 import imgSun from './../assets/img/sun.svg';
 import imgMoon from './../assets/img/moon.svg';
+
+export function ChangeTitle(props) {
+	const intl = useIntl();
+
+	useEffect(() => {
+		const element = document.getElementById(props.element);
+		const originalTitle = intl.formatMessage({ id: 'project.title', defaultMessage: 'Porfolio Jhon Camargo' });
+
+		if (element) {
+			element.addEventListener('mouseover', () => {
+				const translatedTitle = intl.formatMessage({ id: props.idJson, defaultMessage: props.defaultMessage });
+				document.title = `${translatedTitle} - ${originalTitle}`;
+			});
+
+			element.addEventListener('mouseleave', () => {
+				document.title = originalTitle;
+			});
+		}
+
+		return () => {
+			// Eliminar el event listener cuando el componente se desmonte
+			if (element) {
+				element.removeEventListener('mouseover', () => {
+					document.title = 'Portafolio Jhon Camargo';
+				});
+			}
+		};
+	}, [intl]);
+
+	return null; // Opcionalmente, puedes devolver null ya que este componente no renderiza nada visible
+}
 
 export default function Header() {
 	const lang = useContext(langContext);
@@ -58,6 +89,7 @@ export default function Header() {
 		const formPosition = document.getElementById('form').offsetTop;
 		const headerHeight = document.getElementById('header').offsetHeight;
 		let position;
+
 		switch (nameSection) {
 			case 'aboutme':
 				position = aboutPosition;

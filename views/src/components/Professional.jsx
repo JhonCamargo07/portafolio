@@ -1,5 +1,6 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
+import { ChangeTitle } from './Header';
 
 export default function Professional() {
 	return (

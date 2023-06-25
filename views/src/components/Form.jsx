@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import axios from 'axios';
+import { ChangeTitle } from './Header';
 
 export default function Formulario() {
 	const [submittedForm, setSubmittedForm] = useState(null);
@@ -44,6 +45,7 @@ export default function Formulario() {
 
 	return (
 		<>
+			<ChangeTitle element="form" defaultMessage="Contact" idJson="form.title" />
 			<div className="formulario margin-bottom mb-4" id="contact">
 				<h1 className="formulario__titulo informacion__titulo">
 					<FormattedMessage id="form.title" defaultMessage="Portfolio" />

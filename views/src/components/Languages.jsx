@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import ImgHtml from '../assets/img/html.png';
 import ImgCss from '../assets/img/css.png';
 import ImgMD from '../assets/img/markdown.png';
@@ -20,6 +20,7 @@ import ImgPostgreSql from '../assets/img/postgresql.png';
 import ImgMongo from '../assets/img/mongo.png';
 import ImgGit from '../assets/img/git.png';
 import ImgGitHub from '../assets/img/github.png';
+import { ChangeTitle, changeTitle } from './Header';
 
 function AdvanceProggersBar() {
 	return (
@@ -82,6 +83,7 @@ export default function LanguageSkills() {
 
 	return (
 		<>
+			<ChangeTitle element="skills" defaultMessage="Skills" idJson="skills.title" />
 			<div className="habilidades" id="skills">
 				<h1 className="formulario__titulo informacion__titulo">
 					<FormattedMessage id="skills.title" defaultMessage="Skills" />
