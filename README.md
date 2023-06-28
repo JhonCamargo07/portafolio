@@ -1,6 +1,6 @@
 # Jhon Alexander Camargo
 
-[Visitar el portafolio](https://jhoncamargo.000webhostapp.com/)
+[Visitar el portafolio en la web](https://jhoncamargo.000webhostapp.com/)
 
 ## Previews
 
